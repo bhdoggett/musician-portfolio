@@ -60,7 +60,7 @@
   - Integrate AudioPlayer component within expanded song sections
   - _Requirements: 3.2, 3.3, 3.4, 4.4_
 
-- [ ] 9. Add lyrics and copyright display functionality
+- [x] 9. Add lyrics and copyright display functionality
 
   - Create expandable sections for lyrics display within song items
   - Implement copyright information display alongside lyrics
@@ -68,7 +68,7 @@
   - Enable collapse functionality for expanded sections
   - _Requirements: 4.1, 4.2, 4.3, 4.5_
 
-- [ ] 10. Implement single album page layout
+- [x] 10. Implement single album page layout
 
   - Create simplified layout for single-track albums
   - Provide direct access to lyrics and audio for single tracks
@@ -76,7 +76,7 @@
   - Differentiate single pages from EP pages through layout structure
   - _Requirements: 7.2, 7.3, 7.5_
 
-- [ ] 11. Add responsive design and mobile optimization
+- [x] 11. Add responsive design and mobile optimization
 
   - Ensure all components work across desktop and mobile devices
   - Implement touch-friendly interactions for mobile users
@@ -84,7 +84,7 @@
   - Verify audio playback functionality on mobile browsers
   - _Requirements: 6.4, 5.5_
 
-- [ ] 12. Implement audio state management and navigation persistence
+- [x] 12. Implement audio state management and navigation persistence
 
   - Enable audio playback to continue during page navigation
   - Implement global audio state management across components
@@ -92,14 +92,23 @@
   - Handle multiple audio instances and playback conflicts
   - _Requirements: 5.5_
 
-- [ ]\* 13. Add performance optimizations
+- [ ] 13. Add streaming platform links and icons
+
+  - Update Album interface in types to include bandcamp, spotify, and appleMusic URL properties
+  - Modify data/albums.ts to include dummy URLs for all streaming platforms
+  - Create streaming platform icons component with standard service icons
+  - Implement streaming links section on album and single pages
+  - Style icons with organic design principles and hover effects
+  - _Requirements: 2.4, 6.5_
+
+- [ ]\* 14. Add performance optimizations
 
   - Implement lazy loading for Tone.js library until first audio interaction
   - Optimize image loading with Next.js Image component features
   - Add audio file preloading for improved user experience
   - _Requirements: 5.2, 6.4_
 
-- [ ]\* 14. Create error handling and loading states
+- [ ]\* 15. Create error handling and loading states
 
   - Add graceful error handling for audio playback failures
   - Implement loading states for audio and image assets
@@ -107,7 +116,7 @@
   - Add 404 handling for invalid album routes
   - _Requirements: 5.1, 5.2_
 
-- [ ]\* 15. Write component unit tests
+- [ ]\* 16. Write component unit tests
   - Create unit tests for AlbumCard component click handling and rendering
   - Test AudioPlayer component with mocked Tone.js functionality
   - Write tests for SongList expand/collapse behavior

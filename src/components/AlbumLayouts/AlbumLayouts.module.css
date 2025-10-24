@@ -1,0 +1,135 @@
+/* Single Layout - Simplified and focused design */
+.singleLayout {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.singleTrack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2xl);
+  text-align: center;
+}
+
+.singleTrackHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  flex-wrap: wrap;
+}
+
+.singleTrackTitle {
+  font-size: var(--font-size-3xl);
+  color: var(--text-primary);
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .singleTrackTitle {
+    font-size: var(--font-size-4xl);
+  }
+}
+
+/* Direct audio access styling */
+.audioPlayerContainer {
+  background-color: var(--surface-secondary);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--accent-secondary);
+}
+
+/* Direct lyrics access styling */
+.singleLyricsSection {
+  text-align: left;
+  background-color: var(--surface-secondary);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-2xl);
+  box-shadow: var(--shadow-sm);
+}
+
+.singleLyricsTitle {
+  font-size: var(--font-size-2xl);
+  color: var(--text-primary);
+  margin: 0 0 var(--spacing-xl) 0;
+  text-align: center;
+  font-weight: 600;
+}
+
+.singleLyricsContent {
+  line-height: 1.8;
+  font-size: var(--font-size-lg);
+}
+
+.lyricsLine {
+  color: var(--text-primary);
+  margin: 0 0 var(--spacing-sm) 0;
+  text-align: center;
+}
+
+.lyricsLine:last-child {
+  margin-bottom: 0;
+}
+
+/* Copyright styling for singles */
+.singleCopyrightSection {
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--surface-secondary);
+}
+
+.singleCopyright {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+}
+
+/* EP Layout - Interactive track listing design */
+.epLayout {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  .singleLayout {
+    max-width: 100%;
+  }
+
+  .singleTrack {
+    gap: var(--spacing-xl);
+  }
+
+  .singleTrackHeader {
+    gap: var(--spacing-md);
+  }
+
+  .singleTrackTitle {
+    font-size: var(--font-size-2xl);
+  }
+
+  .audioPlayerContainer {
+    padding: var(--spacing-lg);
+  }
+
+  .singleLyricsSection {
+    padding: var(--spacing-lg);
+  }
+
+  .singleLyricsTitle {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-lg);
+  }
+
+  .singleLyricsContent {
+    font-size: var(--font-size-base);
+  }
+
+  .epLayout {
+    max-width: 100%;
+  }
+}

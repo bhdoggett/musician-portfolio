@@ -1,0 +1,123 @@
+.playButton {
+  border-radius: 50%;
+  border: none;
+  background: var(--primary-earth);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.playButton:hover {
+  background: var(--accent-terracotta);
+  transform: scale(1.05);
+}
+
+.playButton.current {
+  background: var(--accent-terracotta);
+  box-shadow: 0 2px 8px rgba(198, 93, 0, 0.3);
+}
+
+.playButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Size variants */
+.playButton.small {
+  width: 32px;
+  height: 32px;
+}
+
+.playButton.small svg {
+  width: 14px;
+  height: 14px;
+}
+
+.playButton.medium {
+  width: 40px;
+  height: 40px;
+}
+
+.playButton.medium svg {
+  width: 16px;
+  height: 16px;
+}
+
+.playButton.large {
+  width: 48px;
+  height: 48px;
+}
+
+.playButton.large svg {
+  width: 20px;
+  height: 20px;
+}
+
+.spinner {
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.small .spinner {
+  width: 14px;
+  height: 14px;
+}
+
+.medium .spinner {
+  width: 16px;
+  height: 16px;
+}
+
+.large .spinner {
+  width: 20px;
+  height: 20px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .playButton.small {
+    width: 36px;
+    height: 36px;
+  }
+
+  .playButton.small svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .playButton.medium {
+    width: 44px;
+    height: 44px;
+  }
+
+  .playButton.medium svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .playButton.large {
+    width: 52px;
+    height: 52px;
+  }
+
+  .playButton.large svg {
+    width: 22px;
+    height: 22px;
+  }
+}

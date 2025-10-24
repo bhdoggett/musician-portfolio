@@ -87,6 +87,7 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding-bottom: 80px; /* Space for global audio player */
 }
 
 * {
@@ -444,6 +445,19 @@ p {
   cursor: pointer;
   transition: all var(--transition-fast);
   min-height: 44px; /* Touch-friendly */
+  min-width: 44px; /* Touch-friendly width */
+  -webkit-tap-highlight-color: transparent; /* Remove iOS tap highlight */
+  touch-action: manipulation; /* Improve touch responsiveness */
+}
+
+/* Mobile-specific button adjustments */
+@media (max-width: 767px) {
+  .btn {
+    min-height: 48px; /* Larger touch target on mobile */
+    min-width: 48px;
+    padding: var(--spacing-md) var(--spacing-lg);
+    font-size: var(--font-size-lg);
+  }
 }
 
 .btn-primary {
@@ -487,6 +501,36 @@ p {
   outline-offset: 2px;
 }
 
+/* Mobile-specific optimizations */
+@media (max-width: 767px) {
+  /* Prevent zoom on input focus on iOS */
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+
+  /* Improve touch scrolling */
+  * {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Remove tap highlights */
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Improve button touch targets */
+  button,
+  [role="button"],
+  input[type="button"],
+  input[type="submit"] {
+    min-height: 44px;
+    min-width: 44px;
+    touch-action: manipulation;
+  }
+}
+
 /* Responsive Typography */
 @media (min-width: 768px) {
   h1 {
@@ -505,5 +549,75 @@ p {
 
   h2 {
     font-size: calc(var(--font-size-3xl) * 1.2);
+  }
+}
+/* Safe area support for devices with notches */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+
+  .container {
+    padding-left: max(var(--spacing-md), env(safe-area-inset-left));
+    padding-right: max(var(--spacing-md), env(safe-area-inset-right));
+  }
+
+  @media (min-width: 768px) {
+    .container {
+      padding-left: max(var(--spacing-lg), env(safe-area-inset-left));
+      padding-right: max(var(--spacing-lg), env(safe-area-inset-right));
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: max(var(--spacing-xl), env(safe-area-inset-left));
+      padding-right: max(var(--spacing-xl), env(safe-area-inset-right));
+    }
+  }
+}
+
+/* Performance optimizations for mobile */
+@media (max-width: 767px) {
+  /* Reduce animations on mobile for better performance */
+  @media (prefers-reduced-motion: no-preference) {
+    * {
+      animation-duration: 0.2s !important;
+      transition-duration: 0.2s !important;
+    }
+  }
+
+  /* Optimize images for mobile */
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .btn {
+    border: 2px solid currentColor;
+  }
+
+  .card {
+    border: 1px solid var(--text-primary);
+  }
+
+  .surface {
+    border: 1px solid var(--text-primary);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

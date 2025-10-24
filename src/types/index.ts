@@ -42,4 +42,5 @@ export interface AlbumCardProps {
 export interface SongListProps {
   songs: Song[];
   albumType: "single" | "ep";
+  album: Album;
 }

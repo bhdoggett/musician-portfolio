@@ -1,0 +1,273 @@
+.audioPlayerButton {
+  background: var(--surface-warm);
+  border-radius: 12px;
+  padding: 16px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.audioPlayerButton.current {
+  background: var(--neutral-cream);
+  border-color: var(--primary-earth);
+  box-shadow: 0 2px 8px rgba(139, 115, 85, 0.15);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  gap: 12px;
+}
+
+.title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--neutral-charcoal);
+  margin: 0;
+  flex: 1;
+}
+
+.nowPlayingIndicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 4px 8px;
+  background: var(--primary-earth);
+  color: white;
+  border-radius: 16px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.waveform {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 12px;
+}
+
+.bar {
+  width: 2px;
+  height: 4px;
+  background: currentColor;
+  border-radius: 1px;
+  transition: height 0.3s ease;
+}
+
+.bar.animated {
+  animation: waveform 1.5s ease-in-out infinite;
+}
+
+.bar:nth-child(1).animated {
+  animation-delay: 0s;
+}
+
+.bar:nth-child(2).animated {
+  animation-delay: 0.3s;
+}
+
+.bar:nth-child(3).animated {
+  animation-delay: 0.6s;
+}
+
+@keyframes waveform {
+  0%,
+  100% {
+    height: 4px;
+  }
+  50% {
+    height: 12px;
+  }
+}
+
+.nowPlayingText {
+  white-space: nowrap;
+}
+
+.error {
+  color: var(--accent-terracotta);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 8px;
+  background: rgba(198, 93, 0, 0.1);
+  border-radius: 8px;
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.playButton {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: var(--primary-earth);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.playButton:hover {
+  background: var(--accent-terracotta);
+  transform: scale(1.05);
+}
+
+.playButton.current {
+  background: var(--accent-terracotta);
+  box-shadow: 0 2px 8px rgba(198, 93, 0, 0.3);
+}
+
+.playButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.playButton svg {
+  width: 20px;
+  height: 20px;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.progressInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.progressBar {
+  height: 4px;
+  background: var(--neutral-cream);
+  border-radius: 2px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: height 0.2s ease;
+}
+
+.progressBar:hover {
+  height: 6px;
+}
+
+/* When the audio player button is current, use a darker background for the progress bar */
+.audioPlayerButton.current .progressBar {
+  background: rgba(139, 115, 85, 0.2); /* Semi-transparent earth color */
+}
+
+.audioPlayerButton.current .progressBar:hover {
+  background: rgba(139, 115, 85, 0.3);
+}
+
+.progressFill {
+  height: 100%;
+  background: var(--primary-earth);
+  border-radius: 2px;
+  transition: width 0.1s ease;
+}
+
+.timeDisplay {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--primary-earth);
+  font-family: var(--font-geist-mono);
+}
+
+.currentTime,
+.duration {
+  min-width: 35px;
+}
+
+.separator {
+  opacity: 0.6;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .audioPlayerButton {
+    padding: 12px;
+  }
+
+  .header {
+    margin-bottom: 8px;
+    gap: 8px;
+  }
+
+  .title {
+    font-size: 15px;
+  }
+
+  .nowPlayingIndicator {
+    padding: 3px 6px;
+    font-size: 11px;
+  }
+
+  .nowPlayingText {
+    display: none;
+  }
+
+  .playButton {
+    width: 44px;
+    height: 44px;
+  }
+
+  .playButton svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .spinner {
+    width: 18px;
+    height: 18px;
+  }
+
+  .controls {
+    gap: 12px;
+  }
+
+  .timeDisplay {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .nowPlayingIndicator {
+    align-self: flex-end;
+  }
+}

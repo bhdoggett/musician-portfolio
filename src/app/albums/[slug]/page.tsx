@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { getAlbumById, getAllAlbums } from "@/data/albums";
-import { SongList } from "@/components/SongList";
+import { SingleLayout, EPLayout } from "@/components/AlbumLayouts";
 import styles from "./page.module.css";
 
 // Generate static params for all albums at build time
@@ -106,47 +106,6 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
           )}
         </main>
       </div>
-    </div>
-  );
-}
-
-// Single Layout Component
-function SingleLayout({ album }: { album: any }) {
-  const song = album.songs[0]; // Singles have only one song
-
-  return (
-    <div className={styles.singleLayout}>
-      <div className={styles.singleTrack}>
-        <h2 className={styles.trackTitle}>{song.title}</h2>
-        <div className={styles.trackPlaceholder}>
-          <p>Audio player will be implemented in task 7</p>
-          <p className={styles.audioPath}>Audio: {song.audioUrl}</p>
-        </div>
-
-        {song.lyrics && (
-          <div className={styles.lyricsSection}>
-            <h3>Lyrics</h3>
-            <div className={styles.lyricsContent}>
-              <p>Lyrics display will be implemented in task 9</p>
-            </div>
-          </div>
-        )}
-
-        {song.copyright && (
-          <div className={styles.copyrightSection}>
-            <p className={styles.copyright}>{song.copyright}</p>
-          </div>
-        )}
-      </div>
-    </div>
-  );
-}
-
-// EP Layout Component
-function EPLayout({ album }: { album: any }) {
-  return (
-    <div className={styles.epLayout}>
-      <SongList songs={album.songs} albumType={album.type} />
     </div>
   );
 }

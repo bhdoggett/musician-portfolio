@@ -1,5 +1,7 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { AudioProvider } from "@/contexts/AudioContext";
+import { GlobalAudioPlayer } from "@/components/GlobalAudioPlayer";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -19,6 +21,7 @@ export const metadata: Metadata = {
   },
   description:
     "A collection of musical works exploring faith, worship, and the depths of God's love. Listen to worship songs, EPs, and singles.",
+
   keywords: [
     "worship music",
     "christian music",
@@ -57,6 +60,13 @@ export const metadata: Metadata = {
   },
 };
 
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -65,7 +75,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+        <AudioProvider>
+          {children}
+          <GlobalAudioPlayer />
+        </AudioProvider>
       </body>
     </html>
   );

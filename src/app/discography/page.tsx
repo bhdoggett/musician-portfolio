@@ -49,14 +49,11 @@ export default function DiscographyPage() {
       <div className="container">
         <header className={styles.header}>
           <h1 className={styles.title}>Discography</h1>
-          <p className={styles.subtitle}>
-            Musical works exploring faith, worship, and the depths of God's love
-          </p>
         </header>
 
         <main className={styles.main}>
           <div
-            className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-lg ${styles.albumGrid}`}
+            className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-md sm:gap-lg ${styles.albumGrid}`}
           >
             {albums.map((album) => (
               <AlbumCard

@@ -22,6 +22,9 @@ export const albums: Album[] = [
         id: "speak-to-me",
         title: "Speak to Me",
         audioUrl: "/assets/music/glad/speak_to_me.m4a",
+        lyrics:
+          "Speak to me, O Lord\nYour servant is listening\nIn the quiet of my heart\nI wait for Your voice\n\nSpeak to me through Your Word\nSpeak to me in the silence\nLet Your truth illuminate\nThe darkness in my soul",
+        copyright: "© 2024 Artist Portfolio. All rights reserved.",
       },
       {
         id: "why-are-you-downcast",
@@ -88,6 +91,9 @@ export const albums: Album[] = [
         id: "more-than-watchmen",
         title: "More Than Watchmen",
         audioUrl: "/assets/music/deep_to_deep/more_than_watchmen.m4a",
+        lyrics:
+          "I wait for the Lord more than watchmen wait for the morning\nMore than watchmen wait for the morning\nMy soul waits for the Lord\n\nWith the Lord there is unfailing love\nAnd with Him is full redemption\nHe Himself will redeem Israel\nFrom all their sins",
+        copyright: "© 2024 Artist Portfolio. All rights reserved.",
       },
       {
         id: "name-above-all-names",
@@ -119,6 +125,9 @@ export const albums: Album[] = [
         id: "love-1-corinthians-13",
         title: "Love (1 Corinthians 13)",
         audioUrl: "/assets/music/1_corinthians_13_love.m4a",
+        lyrics:
+          "Love is patient, love is kind\nLove lets what I cling to and what I want to die\nLove is full of hope\nLove will never boast\n\nLove in purity and all good things delights\nSo love the Lord your God\nWith all your strenght and mind and heart\nLove your neighbor as yourself\nAnd love your enemy as well\n\nLove is humble, love is strong\nLove can bear all things and love will suffer long\nLove will never fade\nThough the earth give way\nLove will hold you in his everlsting arms\n\nIf I speak with the tongues of angels, but have not love\nIf I give all I own away, but have not love\nEven if I can move the mountains\nI am nothing but a resounding noise",
+        copyright: "© 2024 Artist Portfolio. All rights reserved.",
       },
     ],
   },
@@ -134,6 +143,9 @@ export const albums: Album[] = [
         id: "psalm-23-shepherd-me",
         title: "Psalm 23 (Shepherd Me)",
         audioUrl: "/assets/music/psalm_23_shepherd_me.m4a",
+        lyrics:
+          "The Lord is my shepherd, I lack nothing\nHe makes me lie down in green pastures\nHe leads me beside quiet waters\nHe refreshes my soul\n\nHe guides me along the right paths\nFor His name's sake\nEven though I walk through the darkest valley\nI will fear no evil, for You are with me\n\nYour rod and Your staff, they comfort me\nYou prepare a table before me\nIn the presence of my enemies\nYou anoint my head with oil\nMy cup overflows\n\nSurely Your goodness and love will follow me\nAll the days of my life\nAnd I will dwell in the house of the Lord\nForever",
+        copyright: "© 2024 Artist Portfolio. All rights reserved.",
       },
     ],
   },

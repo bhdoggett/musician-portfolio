@@ -1,17 +1,19 @@
 "use client";
 
 import React, { useState } from "react";
-import { Song } from "@/types";
-import { AudioPlayer } from "@/components/AudioPlayer";
+import { Song, Album } from "@/types";
+import { PlayButton } from "@/components/PlayButton";
 import styles from "./SongList.module.css";
 
 interface SongListProps {
   songs: Song[];
   albumType: "single" | "ep";
+  album: Album;
 }
 
 interface SongItemProps {
   song: Song;
+  album: Album;
   index: number;
   isExpanded: boolean;
   onToggle: () => void;
@@ -19,19 +21,22 @@ interface SongItemProps {
 
 const SongItem: React.FC<SongItemProps> = ({
   song,
+  album,
   index,
   isExpanded,
   onToggle,
 }) => {
   return (
     <div className={`${styles.songItem} ${isExpanded ? styles.expanded : ""}`}>
-      <div className={styles.songHeader} onClick={onToggle}>
-        <div className={styles.songInfo}>
+      <div className={styles.songHeader}>
+        <div className={styles.songInfo} onClick={onToggle}>
           <span className={styles.trackNumber}>{index + 1}</span>
+          <PlayButton song={song} album={album} size="small" />
           <h3 className={styles.songTitle}>{song.title}</h3>
         </div>
         <button
           className={styles.expandButton}
+          onClick={onToggle}
           aria-label={
             isExpanded ? "Collapse song details" : "Expand song details"
           }
@@ -49,19 +54,6 @@ const SongItem: React.FC<SongItemProps> = ({
 
       <div className={styles.songContent}>
         <div className={styles.songContentInner}>
-          <div className={styles.audioSection}>
-            <AudioPlayer
-              audioUrl={song.audioUrl}
-              title={song.title}
-              onPlayStateChange={(isPlaying) => {
-                // Optional: Handle play state changes for visual feedback
-                console.log(
-                  `${song.title} is ${isPlaying ? "playing" : "paused"}`
-                );
-              }}
-            />
-          </div>
-
           {song.lyrics && (
             <div className={styles.lyricsSection}>
               <h4 className={styles.lyricsTitle}>Lyrics</h4>
@@ -87,7 +79,11 @@ const SongItem: React.FC<SongItemProps> = ({
   );
 };
 
-export const SongList: React.FC<SongListProps> = ({ songs, albumType }) => {
+export const SongList: React.FC<SongListProps> = ({
+  songs,
+  albumType,
+  album,
+}) => {
   const [expandedSongs, setExpandedSongs] = useState<Set<string>>(new Set());
 
   const toggleSong = (songId: string) => {
@@ -118,6 +114,7 @@ export const SongList: React.FC<SongListProps> = ({ songs, albumType }) => {
           <SongItem
             key={song.id}
             song={song}
+            album={album}
             index={index}
             isExpanded={expandedSongs.has(song.id)}
             onToggle={() => toggleSong(song.id)}

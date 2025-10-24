@@ -2,6 +2,11 @@
 
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { AudioPlayerProps, AudioPlayerState } from "@/types";
+import {
+  isMobileDevice,
+  isIOSDevice,
+  enableAudioContext,
+} from "@/utils/mobile";
 import styles from "./AudioPlayer.module.css";
 
 export const AudioPlayer: React.FC<AudioPlayerProps> = ({
@@ -28,6 +33,15 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
       // Create new audio element
       const audio = new Audio(audioUrl);
       audio.preload = "metadata";
+
+      // Mobile-specific audio settings
+      (audio as any).playsInline = true; // Prevent fullscreen on iOS
+      audio.crossOrigin = "anonymous"; // Handle CORS if needed
+
+      // iOS-specific settings
+      if (isIOSDevice()) {
+        audio.load(); // Preload on iOS
+      }
 
       // Set up event listeners
       audio.addEventListener("loadedmetadata", () => {
@@ -142,6 +156,12 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
 
     try {
       console.log("Starting playback");
+
+      // Mobile-specific: Enable audio context (iOS requirement)
+      if (isMobileDevice()) {
+        await enableAudioContext();
+      }
+
       await audioRef.current.play();
       startProgressTracking();
     } catch (error) {
@@ -180,14 +200,26 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
     }
   }, []);
 
-  // Handle progress bar click
+  // Handle progress bar click and touch
   const handleProgressClick = useCallback(
-    (event: React.MouseEvent<HTMLDivElement>) => {
+    (
+      event: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>
+    ) => {
       if (!state.duration) return;
 
       const rect = event.currentTarget.getBoundingClientRect();
-      const clickX = event.clientX - rect.left;
-      const percentage = clickX / rect.width;
+      let clientX: number;
+
+      // Handle both mouse and touch events
+      if ("touches" in event) {
+        if (event.touches.length === 0) return;
+        clientX = event.touches[0].clientX;
+      } else {
+        clientX = event.clientX;
+      }
+
+      const clickX = clientX - rect.left;
+      const percentage = Math.max(0, Math.min(1, clickX / rect.width));
       const seekTime = percentage * state.duration;
 
       handleSeek(seekTime);
@@ -258,11 +290,20 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
           <div
             className={styles.progressBar}
             onClick={handleProgressClick}
+            onTouchStart={handleProgressClick}
             role="slider"
             aria-valuemin={0}
             aria-valuemax={state.duration}
             aria-valuenow={state.currentTime}
             aria-label="Audio progress"
+            tabIndex={0}
+            onKeyDown={(e) => {
+              if (e.key === "ArrowLeft" && state.duration > 0) {
+                handleSeek(Math.max(0, state.currentTime - 5));
+              } else if (e.key === "ArrowRight" && state.duration > 0) {
+                handleSeek(Math.min(state.duration, state.currentTime + 5));
+              }
+            }}
           >
             <div
               className={styles.progressFill}
