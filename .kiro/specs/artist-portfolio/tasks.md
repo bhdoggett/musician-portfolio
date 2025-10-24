@@ -36,7 +36,7 @@
   - Add page metadata and SEO optimization
   - _Requirements: 1.1, 1.4, 2.2_
 
-- [ ] 6. Implement dynamic album pages
+- [x] 6. Implement dynamic album pages
 
   - Create dynamic route structure for individual album pages
   - Build album page layout with cover art and metadata display
@@ -44,7 +44,7 @@
   - Add navigation back to discography
   - _Requirements: 2.3, 2.5, 7.1, 7.4_
 
-- [ ] 7. Build AudioPlayer component with Tone.js
+- [x] 7. Build AudioPlayer component with Tone.js
 
   - Create AudioPlayer component using Tone.js for .m4a file playback
   - Implement play, pause, and seek controls with organic styling
@@ -52,7 +52,7 @@
   - Handle audio loading states and error conditions
   - _Requirements: 5.1, 5.2, 5.3, 5.4_
 
-- [ ] 8. Create interactive SongList component for EPs
+- [x] 8. Create interactive SongList component for EPs
 
   - Build SongList component with expandable song items
   - Implement click-to-expand functionality for individual songs

@@ -2,6 +2,72 @@ import { Album } from "@/types";
 
 // Centralized album data configuration mapping to existing assets
 export const albums: Album[] = [
+  // Glad EP
+  {
+    id: "glad",
+    title: "Glad",
+    type: "ep",
+    coverArt: "/assets/images/glad.jpeg",
+    description: "Songs that mark a season of fighting for joy",
+    songs: [
+      {
+        id: "make-me-glad",
+        title: "Make Me Glad",
+        audioUrl: "/assets/music/glad/make_me_glad.m4a",
+        lyrics:
+          "Make me glad in You, O Lord\nLet my heart rejoice in Your salvation\nFor You have been good to me\nYour love endures forever",
+        copyright: "© 2024 Artist Portfolio. All rights reserved.",
+      },
+      {
+        id: "speak-to-me",
+        title: "Speak to Me",
+        audioUrl: "/assets/music/glad/speak_to_me.m4a",
+      },
+      {
+        id: "why-are-you-downcast",
+        title: "Why Are You Downcast",
+        audioUrl: "/assets/music/glad/why_are_you_downcast.m4a",
+      },
+      {
+        id: "hope-of-glory",
+        title: "Hope of Glory",
+        audioUrl: "/assets/music/glad/hope_of_glory.m4a",
+      },
+      {
+        id: "abba-father",
+        title: "Abba Father",
+        audioUrl: "/assets/music/glad/abba_father.m4a",
+      },
+      {
+        id: "soul-be-stirred",
+        title: "Soul Be Stirred",
+        audioUrl: "/assets/music/glad/soul_be_stirred.m4a",
+      },
+      {
+        id: "o-my-soul",
+        title: "O My Soul",
+        audioUrl: "/assets/music/glad/o_my_soul.m4a",
+      },
+      {
+        id: "a-whole-years-wages",
+        title: "A Whole Year's Wages",
+        audioUrl: "/assets/music/glad/a_whole_years_wages.m4a",
+      },
+
+      {
+        id: "poor-in-spirit",
+        title: "Poor in Spirit",
+        audioUrl: "/assets/music/glad/poor_in_spirit.m4a",
+      },
+
+      {
+        id: "whatever-was-to-my-profit",
+        title: "Whatever Was to My Profit",
+        audioUrl: "/assets/music/glad/whatever_was_to_my_profit.m4a",
+      },
+    ],
+  },
+
   // Deep to Deep EP
   {
     id: "deep-to-deep",
@@ -14,6 +80,9 @@ export const albums: Album[] = [
         id: "faithful-one",
         title: "Faithful One",
         audioUrl: "/assets/music/deep_to_deep/faithful_one.m4a",
+        lyrics:
+          "Faithful One, You never change\nYour love remains the same\nThrough every season, every storm\nYou are my anchor, You are my home",
+        copyright: "© 2024 Artist Portfolio. All rights reserved.",
       },
       {
         id: "more-than-watchmen",
@@ -34,67 +103,6 @@ export const albums: Album[] = [
         id: "romans-doxology",
         title: "Romans Doxology",
         audioUrl: "/assets/music/deep_to_deep/romans_doxology.m4a",
-      },
-    ],
-  },
-
-  // Glad EP
-  {
-    id: "glad",
-    title: "Glad",
-    type: "ep",
-    coverArt: "/assets/images/glad.jpeg",
-    description: "Songs that mark a season of fighting for joy",
-    songs: [
-      {
-        id: "a-whole-years-wages",
-        title: "A Whole Year's Wages",
-        audioUrl: "/assets/music/glad/a_whole_years_wages.m4a",
-      },
-      {
-        id: "abba-father",
-        title: "Abba Father",
-        audioUrl: "/assets/music/glad/abba_father.m4a",
-      },
-      {
-        id: "hope-of-glory",
-        title: "Hope of Glory",
-        audioUrl: "/assets/music/glad/hope_of_glory.m4a",
-      },
-      {
-        id: "make-me-glad",
-        title: "Make Me Glad",
-        audioUrl: "/assets/music/glad/make_me_glad.m4a",
-      },
-      {
-        id: "o-my-soul",
-        title: "O My Soul",
-        audioUrl: "/assets/music/glad/o_my_soul.m4a",
-      },
-      {
-        id: "poor-in-spirit",
-        title: "Poor in Spirit",
-        audioUrl: "/assets/music/glad/poor_in_spirit.m4a",
-      },
-      {
-        id: "soul-be-stirred",
-        title: "Soul Be Stirred",
-        audioUrl: "/assets/music/glad/soul_be_stirred.m4a",
-      },
-      {
-        id: "speak-to-me",
-        title: "Speak to Me",
-        audioUrl: "/assets/music/glad/speak_to_me.m4a",
-      },
-      {
-        id: "whatever-was-to-my-profit",
-        title: "Whatever Was to My Profit",
-        audioUrl: "/assets/music/glad/whatever_was_to_my_profit.m4a",
-      },
-      {
-        id: "why-are-you-downcast",
-        title: "Why Are You Downcast",
-        audioUrl: "/assets/music/glad/why_are_you_downcast.m4a",
       },
     ],
   },

@@ -1,0 +1,316 @@
+.albumPage {
+  padding: var(--spacing-xl) 0;
+  min-height: 100vh;
+}
+
+/* Navigation */
+.navigation {
+  margin-bottom: var(--spacing-2xl);
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  color: var(--text-secondary);
+  font-weight: 500;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-fast);
+  background-color: var(--surface);
+  box-shadow: var(--shadow-sm);
+}
+
+.backLink:hover {
+  color: var(--accent);
+  background-color: var(--surface-secondary);
+  transform: translateX(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Album Header */
+.albumHeader {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-xl);
+  margin-bottom: var(--spacing-3xl);
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .albumHeader {
+    grid-template-columns: auto 1fr;
+    gap: var(--spacing-2xl);
+  }
+}
+
+.coverArt {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+  .coverArt {
+    justify-content: flex-start;
+    margin-bottom: 0;
+  }
+}
+
+.coverImage {
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  height: auto;
+  max-width: 400px;
+  transition: transform var(--transition-slow);
+}
+
+.coverImage:hover {
+  transform: scale(1.02);
+}
+
+.albumInfo {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .albumInfo {
+    text-align: left;
+    padding-top: var(--spacing-lg);
+  }
+}
+
+.albumTitle {
+  font-size: var(--font-size-4xl);
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
+  line-height: 1.1;
+}
+
+@media (min-width: 768px) {
+  .albumTitle {
+    font-size: calc(var(--font-size-4xl) * 1.2);
+  }
+}
+
+.albumType {
+  font-size: var(--font-size-lg);
+  color: var(--text-secondary);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: var(--spacing-md);
+}
+
+.albumDescription {
+  font-size: var(--font-size-lg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  margin-bottom: var(--spacing-lg);
+  font-style: italic;
+}
+
+.albumMeta {
+  display: flex;
+  gap: var(--spacing-lg);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  .albumMeta {
+    justify-content: flex-start;
+  }
+}
+
+.trackCount {
+  color: var(--text-secondary);
+  font-weight: 500;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--surface-secondary);
+  border-radius: var(--radius-lg);
+  font-size: var(--font-size-sm);
+}
+
+/* Album Content */
+.albumContent {
+  background-color: var(--surface);
+  border-radius: var(--radius-2xl);
+  padding: var(--spacing-2xl);
+  box-shadow: var(--shadow-md);
+}
+
+/* Single Layout */
+.singleLayout {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.singleTrack {
+  text-align: center;
+}
+
+.trackTitle {
+  font-size: var(--font-size-2xl);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xl);
+  font-weight: 600;
+}
+
+.trackPlaceholder {
+  background-color: var(--surface-secondary);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+  margin-bottom: var(--spacing-xl);
+  border: 2px dashed var(--accent-secondary);
+}
+
+.trackPlaceholder p {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.audioPath {
+  font-family: var(--font-geist-mono);
+  font-size: var(--font-size-sm);
+  color: var(--accent);
+  background-color: var(--surface);
+  padding: var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  word-break: break-all;
+}
+
+.audioPlayerContainer {
+  margin-bottom: var(--spacing-xl);
+}
+
+.lyricsSection {
+  margin-top: var(--spacing-2xl);
+  text-align: left;
+}
+
+.lyricsSection h3 {
+  font-size: var(--font-size-xl);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-lg);
+  text-align: center;
+}
+
+.lyricsContent {
+  background-color: var(--surface-secondary);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+}
+
+.copyrightSection {
+  margin-top: var(--spacing-xl);
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--surface-secondary);
+}
+
+.copyright {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* EP Layout */
+.epLayout {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.trackListTitle {
+  font-size: var(--font-size-2xl);
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-xl);
+  text-align: center;
+  font-weight: 600;
+}
+
+.tracks {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-lg);
+}
+
+.trackItem {
+  background-color: var(--surface-secondary);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-lg);
+  transition: all var(--transition-base);
+  border: 1px solid transparent;
+}
+
+.trackItem:hover {
+  background-color: var(--surface);
+  border-color: var(--accent-secondary);
+  box-shadow: var(--shadow-sm);
+  transform: translateY(-1px);
+}
+
+.trackHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+}
+
+.trackNumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: var(--accent-secondary);
+  color: var(--surface-white);
+  border-radius: 50%;
+  font-weight: 600;
+  font-size: var(--font-size-sm);
+  flex-shrink: 0;
+}
+
+.trackTitle {
+  font-size: var(--font-size-lg);
+  color: var(--text-primary);
+  font-weight: 600;
+  margin: 0;
+}
+
+.trackContent {
+  margin-left: calc(32px + var(--spacing-md));
+}
+
+@media (max-width: 640px) {
+  .trackContent {
+    margin-left: 0;
+    margin-top: var(--spacing-md);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .albumPage {
+    padding: var(--spacing-lg) 0;
+  }
+
+  .albumContent {
+    padding: var(--spacing-lg);
+  }
+
+  .albumTitle {
+    font-size: var(--font-size-3xl);
+  }
+
+  .trackHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-sm);
+  }
+
+  .trackNumber {
+    align-self: flex-start;
+  }
+}

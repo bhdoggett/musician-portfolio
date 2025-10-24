@@ -1,0 +1,263 @@
+.audioPlayer {
+  background: var(--surface);
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--neutral-cream);
+  transition: all var(--transition-base);
+}
+
+.audioPlayer:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.header {
+  margin-bottom: var(--spacing-md);
+}
+
+.title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 var(--spacing-xs) 0;
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: rgba(198, 93, 0, 0.1);
+  border: 1px solid var(--accent-terracotta);
+  border-radius: var(--radius-md);
+  color: var(--accent-terracotta);
+  font-size: var(--font-size-sm);
+  margin-top: var(--spacing-xs);
+}
+
+.retryButton {
+  background: var(--accent-terracotta);
+  color: var(--surface-white);
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.retryButton:hover:not(:disabled) {
+  background: var(--primary-earth);
+  transform: translateY(-1px);
+}
+
+.retryButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.playButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: var(--accent);
+  color: var(--surface-white);
+  cursor: pointer;
+  transition: all var(--transition-base);
+  flex-shrink: 0;
+}
+
+.playButton:hover:not(:disabled) {
+  background: var(--primary-earth);
+  transform: scale(1.05);
+  box-shadow: var(--shadow-md);
+}
+
+.playButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.playButton svg {
+  width: 20px;
+  height: 20px;
+}
+
+.playButton.playing {
+  background: var(--secondary-sage);
+}
+
+.playButton.playing:hover:not(:disabled) {
+  background: var(--primary-earth);
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid var(--surface-white);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.progressContainer {
+  flex: 1;
+  min-width: 0;
+}
+
+.progressBar {
+  position: relative;
+  height: 8px;
+  background: var(--neutral-cream);
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.progressBar:hover {
+  height: 10px;
+}
+
+.progressBar:hover .progressThumb {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--secondary-sage));
+  border-radius: var(--radius-lg);
+  transition: width var(--transition-fast);
+}
+
+.progressThumb {
+  position: absolute;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  background: var(--accent);
+  border: 2px solid var(--surface-white);
+  border-radius: 50%;
+  transform: translateY(-50%) scale(0);
+  opacity: 0;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+  pointer-events: none;
+}
+
+.timeDisplay {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-family: var(--font-geist-mono), monospace;
+  flex-shrink: 0;
+  min-width: 80px;
+}
+
+.currentTime {
+  color: var(--accent);
+}
+
+.separator {
+  color: var(--text-secondary);
+}
+
+.duration {
+  color: var(--text-secondary);
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .audioPlayer {
+    padding: var(--spacing-md);
+  }
+
+  .controls {
+    gap: var(--spacing-sm);
+  }
+
+  .playButton {
+    width: 44px;
+    height: 44px;
+  }
+
+  .playButton svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .timeDisplay {
+    font-size: var(--font-size-xs);
+    min-width: 70px;
+  }
+
+  .progressBar {
+    height: 10px;
+  }
+
+  .progressBar:hover {
+    height: 12px;
+  }
+
+  .progressThumb {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Focus states for accessibility */
+.playButton:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.progressBar:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: var(--radius-lg);
+}
+
+.retryButton:focus-visible {
+  outline: 2px solid var(--accent-terracotta);
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .progressBar {
+    border: 1px solid var(--text-primary);
+  }
+
+  .progressFill {
+    background: var(--text-primary);
+  }
+
+  .progressThumb {
+    border-color: var(--text-primary);
+    background: var(--surface-white);
+  }
+}
