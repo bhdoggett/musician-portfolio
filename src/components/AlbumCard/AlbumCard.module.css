@@ -1,0 +1,205 @@
+.albumCard {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--surface);
+  border-radius: var(--radius-2xl);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  position: relative;
+  min-height: 320px;
+}
+
+.albumCard:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px);
+}
+
+.albumCard:focus-visible {
+  outline: 3px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.albumCard:active {
+  transform: translateY(-2px);
+  transition: transform var(--transition-fast);
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  background-color: var(--neutral-cream);
+}
+
+.coverImage {
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.albumCard:hover .coverImage {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(44, 44, 44, 0) 0%,
+    rgba(44, 44, 44, 0.1) 50%,
+    rgba(44, 44, 44, 0.3) 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.albumCard:hover .overlay {
+  opacity: 1;
+}
+
+.playIcon {
+  width: 48px;
+  height: 48px;
+  background-color: var(--surface-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  box-shadow: var(--shadow-lg);
+  transform: scale(0.8);
+  transition: transform var(--transition-base);
+}
+
+.albumCard:hover .playIcon {
+  transform: scale(1);
+}
+
+.content {
+  padding: var(--spacing-lg);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.title {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.3;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.type {
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.description {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+  line-height: 1.4;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+  .albumCard {
+    min-height: 280px;
+  }
+
+  .content {
+    padding: var(--spacing-md);
+  }
+
+  .title {
+    font-size: var(--font-size-base);
+  }
+
+  .playIcon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .playIcon svg {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .albumCard {
+    min-height: 300px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .albumCard {
+    min-height: 340px;
+  }
+
+  .content {
+    padding: var(--spacing-xl);
+  }
+
+  .title {
+    font-size: var(--font-size-xl);
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .albumCard,
+  .coverImage,
+  .overlay,
+  .playIcon {
+    transition: none;
+  }
+
+  .albumCard:hover {
+    transform: none;
+  }
+
+  .albumCard:hover .coverImage {
+    transform: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .albumCard {
+    border: 2px solid var(--text-primary);
+  }
+
+  .overlay {
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .playIcon {
+    border: 2px solid var(--accent);
+  }
+}
