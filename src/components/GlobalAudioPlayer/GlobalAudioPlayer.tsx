@@ -5,7 +5,7 @@ import { useAudio } from "@/contexts/AudioContext";
 import styles from "./GlobalAudioPlayer.module.css";
 
 export const GlobalAudioPlayer: React.FC = () => {
-  const { state, pauseTrack, seekTo } = useAudio();
+  const { state, playTrack, pauseTrack, seekTo } = useAudio();
 
   // Format time display
   const formatTime = useCallback((seconds: number): string => {
@@ -57,7 +57,12 @@ export const GlobalAudioPlayer: React.FC = () => {
       <div className={styles.controls}>
         <button
           className={`${styles.playButton} ${state.isPlaying ? styles.playing : ""}`}
-          onClick={state.isPlaying ? pauseTrack : () => {}}
+          onClick={
+            state.isPlaying
+              ? pauseTrack
+              : () =>
+                  playTrack(state.currentTrack!.song, state.currentTrack!.album)
+          }
           disabled={state.isLoading || !!state.error}
           aria-label={state.isPlaying ? "Pause" : "Play"}
         >

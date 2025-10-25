@@ -34,7 +34,7 @@ export default function AlbumCard({ album, onClick }: AlbumCardProps) {
           className={styles.coverImage}
           priority={false}
         />
-        <div className={styles.overlay}>
+        {/* <div className={styles.overlay}>
           <div className={styles.playIcon}>
             <svg
               width="24"
@@ -46,7 +46,7 @@ export default function AlbumCard({ album, onClick }: AlbumCardProps) {
               <path d="M8 5V19L19 12L8 5Z" fill="currentColor" />
             </svg>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

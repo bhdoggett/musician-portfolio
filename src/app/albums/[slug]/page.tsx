@@ -82,9 +82,6 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
 
           <div className={styles.albumInfo}>
             <h1 className={styles.albumTitle}>{album.title}</h1>
-            <p className={styles.albumType}>
-              {album.type === "ep" ? "Extended Play" : "Single"}
-            </p>
             {album.description && (
               <p className={styles.albumDescription}>{album.description}</p>
             )}

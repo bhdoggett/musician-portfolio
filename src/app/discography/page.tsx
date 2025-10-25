@@ -53,7 +53,7 @@ export default function DiscographyPage() {
 
         <main className={styles.main}>
           <div
-            className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-md sm:gap-lg ${styles.albumGrid}`}
+            className={`grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-lg sm:gap-xl lg:gap-2xl ${styles.albumGrid}`}
           >
             {albums.map((album) => (
               <AlbumCard

@@ -15,8 +15,8 @@ export const albums: Album[] = [
         title: "Make Me Glad",
         audioUrl: "/assets/music/glad/make_me_glad.m4a",
         lyrics:
-          "Make me glad in You, O Lord\nLet my heart rejoice in Your salvation\nFor You have been good to me\nYour love endures forever",
-        copyright: "© 2024 Artist Portfolio. All rights reserved.",
+          "Make me glad for as many days as I have known pain an sorrow\nMake me glad for as many years as I have known fear and doubt\nJesus my friend, Jesus my Savior\nJesus, the only hope I have of being glad",
+        copyright: "© 2010. All rights reserved.",
       },
       {
         id: "speak-to-me",
@@ -84,31 +84,41 @@ export const albums: Album[] = [
         title: "Faithful One",
         audioUrl: "/assets/music/deep_to_deep/faithful_one.m4a",
         lyrics:
-          "Faithful One, You never change\nYour love remains the same\nThrough every season, every storm\nYou are my anchor, You are my home",
-        copyright: "© 2024 Artist Portfolio. All rights reserved.",
+          "Faithful One, we will hope in your unfailing love\nFrom the rising to the setting sun\nWe will hope in Jesus' name\nYou have never failed us\n\nRich in compassion, lavish in love\nHope of the nations, beautiful God\nFull of new mercy day after day\nYou come to save me, Lamb who was slain\n\nAnd for eternity we'll sing this song:\nOur God is love, Our God is love\nThe One who was and is and is to come\nOur God is love, Our God is love\nOur God is love, Our God is love\n\nFaithful One, we will hope in your unfailing love\nFrom the rising to the setting sun\nWe will hope in Jesus' name\nYou have never failed us\nYou have never failed us\nYou will Neve fail us",
+        copyright: "Words & Music © 2010. All rights reserved.",
+      },
+
+      {
+        id: "name-above-all-names",
+        title: "Name Above All Names",
+        audioUrl: "/assets/music/deep_to_deep/name_above_all_names.m4a",
+        lyrics:
+          "Jesus, You are God among us\nYou are God's own radience, Light of the world\nJesus, how you condescended\nHoly God of heaven, You are the Lord\n\nYou became nothing, broken to love me\nEven to death on a cross\n\nYou are the Name above all names\nYou are the one Ancient of Days\nYou are the one my heart will praise\nJesus I love you\nAt your name every knee will bow\nAll of creation will cry out\nYou are the one my heart will crown\nJesus I love you, Jesus I love you\n\nJesus, you took on my weakness\nMade in human likeness, servant of all\nJesus, risen and victorious\nGlory in the highest, you are enthroned\n\nYou became nothing, broken to love me\nEven to death on a cross\nTempted as I am, You were obedient\nFaithful and true Son of God\n\nJesus I love you, I want to be like you\nHaving this attitude, serving beside you\nJesus I love you, I want to be with you\nHaving this attitude, in dying I find you",
+        copyright: "Words & Music © 2012. All rights reserved.",
       },
       {
         id: "more-than-watchmen",
         title: "More Than Watchmen",
         audioUrl: "/assets/music/deep_to_deep/more_than_watchmen.m4a",
         lyrics:
-          "I wait for the Lord more than watchmen wait for the morning\nMore than watchmen wait for the morning\nMy soul waits for the Lord\n\nWith the Lord there is unfailing love\nAnd with Him is full redemption\nHe Himself will redeem Israel\nFrom all their sins",
-        copyright: "© 2024 Artist Portfolio. All rights reserved.",
-      },
-      {
-        id: "name-above-all-names",
-        title: "Name Above All Names",
-        audioUrl: "/assets/music/deep_to_deep/name_above_all_names.m4a",
+          'Out of the depths I call to you, listen to my plea\nOut of the depths I cry the name of Jesus\nBattered by my circumstance, broken at your feet\nBut voice enough to sigh the name of Jesus\n\nWhere else would I go?\nYou\'re my only hope\n\nMore than watchmen wait for morning\nI will wait for you my God\nIn your promise I will glory\nAll my hope is in your love\n\nIf you kept a record of, all our sinful ways\nWho, O Lord, could stand to face your glory\nBut full of mercy, rich in love, you have come to save\nSo in my weary bones I whisper "worthy, you are worthy"\n\nMy soul waits for the break of day\nYou will surely come, as the rising sun\nMy soul longs for the coming dawn\nYou will surely come to us',
+        copyright: "Words & Music © 2010. All rights reserved.",
       },
       {
         id: "o-the-fathers-love",
         title: "O The Father's Love",
         audioUrl: "/assets/music/deep_to_deep/o_the_fathers_love.m4a",
+        lyrics:
+          "You kissed my face when I was your foe\nFather you called me home\nI had returned to beg at your feet\nHere you embraced me\n\nO the Father's love is overwhelming\nCovering all my shame\nSee the Father run, his arms embrace me\nLifting me up in his grace\n\nRiches unheard of, squandered in sin\nI spent my inheritance\nNow at the cost of your innocent Son\nYou made a way for us\nYou made a way for us\n\nHeaven and earth, when have you heard\nWhen have you seen such a thing?\nWonder of wonders, the heart of the Father\nYou welcome the prodigal in",
+        copyright: "Words & Music © 2010. All rights reserved.",
       },
       {
         id: "romans-doxology",
         title: "Romans Doxology",
         audioUrl: "/assets/music/deep_to_deep/romans_doxology.m4a",
+        lyrics:
+          "Oh the depth of the riches of the knowledge and wisdom\nHow unsearchable the judgments of the Lord\nWho has given him counsel? All his ways are untraceable\nWho has known the eternal mind of the Lord\n\nFrom you, Lord, and through you, Lord\nAnd to you, Lord are all things\nYou are the first and you are the last\nAnd yours is all the glory\n\nWhat on earth could we give him, that the Lord should repay it\nAll our rightful obedience is the Lord's\n\nYours is the glory forever and ever\nAnd ever and ever, Amen",
+        copyright: "Words & Music © 2010. All rights reserved.",
       },
     ],
   },

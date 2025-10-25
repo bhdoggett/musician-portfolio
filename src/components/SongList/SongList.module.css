@@ -77,7 +77,6 @@
   align-items: center;
   gap: 1rem;
   flex: 1;
-  cursor: pointer;
 }
 
 .trackNumber {
@@ -100,6 +99,13 @@
   color: var(--neutral-charcoal);
   margin: 0;
   line-height: 1.4;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  flex: 1;
+}
+
+.songTitle:hover {
+  color: var(--primary-earth);
 }
 
 .expandButton {

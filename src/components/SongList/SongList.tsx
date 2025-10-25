@@ -29,10 +29,12 @@ const SongItem: React.FC<SongItemProps> = ({
   return (
     <div className={`${styles.songItem} ${isExpanded ? styles.expanded : ""}`}>
       <div className={styles.songHeader}>
-        <div className={styles.songInfo} onClick={onToggle}>
+        <div className={styles.songInfo}>
           <span className={styles.trackNumber}>{index + 1}</span>
           <PlayButton song={song} album={album} size="small" />
-          <h3 className={styles.songTitle}>{song.title}</h3>
+          <h3 className={styles.songTitle} onClick={onToggle}>
+            {song.title}
+          </h3>
         </div>
         <button
           className={styles.expandButton}
@@ -99,28 +101,17 @@ export const SongList: React.FC<SongListProps> = ({
   };
 
   return (
-    <div className={styles.songList}>
-      <div className={styles.songListHeader}>
-        <h2 className={styles.songListTitle}>
-          {albumType === "ep" ? "Track List" : "Track"}
-        </h2>
-        <p className={styles.songListSubtitle}>
-          Click on any track to expand and listen
-        </p>
-      </div>
-
-      <div className={styles.songs}>
-        {songs.map((song, index) => (
-          <SongItem
-            key={song.id}
-            song={song}
-            album={album}
-            index={index}
-            isExpanded={expandedSongs.has(song.id)}
-            onToggle={() => toggleSong(song.id)}
-          />
-        ))}
-      </div>
+    <div className={styles.songs}>
+      {songs.map((song, index) => (
+        <SongItem
+          key={song.id}
+          song={song}
+          album={album}
+          index={index}
+          isExpanded={expandedSongs.has(song.id)}
+          onToggle={() => toggleSong(song.id)}
+        />
+      ))}
     </div>
   );
 };
