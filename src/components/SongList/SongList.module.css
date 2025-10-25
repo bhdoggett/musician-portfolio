@@ -156,7 +156,7 @@
 }
 
 .songItem.expanded .songContent {
-  max-height: 1000px; /* Large enough to accommodate content */
+  max-height: none; /* Allow unlimited height for long lyrics */
 }
 
 .songContentInner {

@@ -11,62 +11,79 @@ export const albums: Album[] = [
     description: "Songs that mark a season of fighting for joy",
     songs: [
       {
-        id: "make-me-glad",
-        title: "Make Me Glad",
-        audioUrl: "/assets/music/glad/make_me_glad.m4a",
+        id: "glad",
+        title: "Glad",
+        audioUrl: "/assets/music/glad/glad.mp3",
         lyrics:
           "Make me glad for as many days as I have known pain an sorrow\nMake me glad for as many years as I have known fear and doubt\nJesus my friend, Jesus my Savior\nJesus, the only hope I have of being glad",
-        copyright: "© 2010. All rights reserved.",
+        copyright: "Words & Music by Ben Doggett © 2010 Ben Doggett",
       },
       {
         id: "speak-to-me",
         title: "Speak to Me",
-        audioUrl: "/assets/music/glad/speak_to_me.m4a",
+        audioUrl: "/assets/music/glad/speak_to_me.mp3",
         lyrics:
-          "Speak to me, O Lord\nYour servant is listening\nIn the quiet of my heart\nI wait for Your voice\n\nSpeak to me through Your Word\nSpeak to me in the silence\nLet Your truth illuminate\nThe darkness in my soul",
-        copyright: "© 2024 Artist Portfolio. All rights reserved.",
+          "I am full of anxiety so come and search me\nYou are the giver of a peace that surpasses understanding\nI have been suffocating in this dark and lonely sea\nYou would come and comfort if I would only ask you to speak to me\nCome and Speak to me\nCome and Speak to me\nCome and Speak to me\nCome and Speak to me\n\nI would come in prayer and petition the God who saves\nYou have always been ready to hear what I've got to say\nI will come with thanks in my heart for the One who bled\nYou are the very thing I need, I need a Word made flesh",
+        copyright: "Words & Music by Ben Doggett © 2010 Ben Doggett",
       },
       {
         id: "why-are-you-downcast",
         title: "Why Are You Downcast",
-        audioUrl: "/assets/music/glad/why_are_you_downcast.m4a",
+        audioUrl: "/assets/music/glad/why_are_you_downcast.mp3",
+        lyrics:
+          "Why are you downcast, O my soul?\nWhy so disturbed within me?\nSet foot on this rock, put your hope in God\nhe is a sure foundation\nWhy are you downcast, O my soul?\nWhy so disturbed within me?\nSet your weary eyes on the Lord of life\nHe is our one salvation\n\nMy soul will boast in the Lord\nLet the afflicted hear and rejoice\nMy soul will boast in the Lord\nLet the afflicted hear and rejoice\n\nWhy are you downcast, O my soul?\nWhy so disturbed within me?\nHe is arisen now, pouring mercy out\nAnd You have been forgiven\nAnd you have been forgiven\nAnd you have been forgiven\n\nHosanna in the highest\nHosanna to the King\nBehold, O Daughter of Zion\nYour Savior riding in",
+        copyright: "Words & Music by Ben Doggett © 2006 Ben Doggett",
       },
       {
         id: "hope-of-glory",
         title: "Hope of Glory",
-        audioUrl: "/assets/music/glad/hope_of_glory.m4a",
+        audioUrl: "/assets/music/glad/hope_of_glory.mp3",
+        lyrics:
+          "I can't see more than a foot in front of my face\nI can't stand but for the hope of your mercy\nCan't run 'cause the devil's gettin' in my way\nO for feet fitted with the gospel of your peace\n\nI will press on to take hold\nOf that for which you have won my soul\nI'm not lookin' back behind me\nI've got my eyes fixed on my hope of glory\n\nI can't feel more than a heartbeat of love\nI can't speak much louder than this weak whisper\nAnd how many times have I said I've had enough\nO for the day I am gonna see my Savior",
+        copyright: "Words & Music by Ben Doggett © 2008 Ben Doggett",
       },
       {
         id: "abba-father",
         title: "Abba Father",
-        audioUrl: "/assets/music/glad/abba_father.m4a",
+        audioUrl: "/assets/music/glad/abba_father.mp3",
+        lyrics:
+          "In the midst of all my trouble, You are Father\nIn the midst of every trial, You are Abba\nYou are Abba, You are Abba\nEven in my darkest hour, You are Father\nEven though I trip and falter, You are Abba\nYou are Abba, You are Abba\n\nNot my will but let yours be done\nLet your will be my own\nThough the pain and the darkness come\nI am never alone\n\nYou are Abba Father\nYou are Abba Father\nYou are Abba Father\nYou are Abba Father",
+        copyright: "Words & Music by Ben Doggett © 2008 Ben Doggett",
       },
       {
         id: "soul-be-stirred",
         title: "Soul Be Stirred",
-        audioUrl: "/assets/music/glad/soul_be_stirred.m4a",
+        audioUrl: "/assets/music/glad/soul_be_stirred.mp3",
+        lyrics:
+          "Soul, be stirred, he is the Lord\nHe is Emmanuel\nSoul, arise to sing and priase\nHe lifted you from hell\nAnd forget not all his benefits\nWho redeems your life from the pit\nWho crowns you with compassion\nAnd loves you all day\nAnd forget not all his benefits\nAnd call back to remembrance\nThat the Lord your God is faithful\nAbounding in grace\n\nI command my soul to sing\nI command my soul to priase\nAnd in light of all I've seen\nI will always love your name",
+        copyright: "Words & Music by Ben Doggett © 2007 Ben Doggett",
       },
       {
         id: "o-my-soul",
         title: "O My Soul",
-        audioUrl: "/assets/music/glad/o_my_soul.m4a",
+        audioUrl: "/assets/music/glad/o_my_soul.mp3",
+        lyrics:
+          "O my soul, don't forget the way he led you out\nO my soul, don't forget\nO my soul, come repent of sins that ail you now\nO my soul, praise him yet\n\nAnd as you find yourself here in a peaceful land\nFail not to remember what he did to bring you in my soul\nO my soul, O my soul, O my soul\n\nO my soul, don't forget the long and weary night\nO my soul, don't forget\nO my soul, don't forget the day he saved your life\nO my soul, praise him yet\n\nO my Lord, you remain a Father and a friend\nO my Lord, you remain\nO my Lord, God, you save the dead and dying man\nO my Lord, God you save, you save\nAnd as I find myself here in a peaceful land\nAlways I'll remember what you did to bring me in my Lord\nO my Lord, O my Lord, O my Lord",
+        copyright: "Words & Music by Ben Doggett © 2010 Ben Doggett",
       },
       {
         id: "a-whole-years-wages",
         title: "A Whole Year's Wages",
-        audioUrl: "/assets/music/glad/a_whole_years_wages.m4a",
+        audioUrl: "/assets/music/glad/a_whole_years_wages.mp3",
+        lyrics:
+          "I brought my alabaster Jar, but it's not broken yet\nAnd there's still time for me to give you something less extravagant\n\nA whole year's wages\nA whole life's praises\nAre you worth this?\nAre you worth this Lord?\n\nI hear the murmors of the crowd\nBut still I venture in\nWhen my Jesus is before me\nShould I stop for fear of men?\n\nA whole year's wages\nAnd all their faces\nAre you worth this?\nAre you worth this, Lord?\n\nHow can I give what costs me nothing\nWhen you gave up your life\nAnd so I bring this costly offering\nA living sacrifice\n\nAnd so I pour upon your head\nThe contents of my broken heart\nAnd there is no turning back now\nI am forever yours, O God\n\nA whole year's wages\nA whole life's praisesYou are worth this\nYou are worth this, Lord",
       },
 
       {
         id: "poor-in-spirit",
         title: "Poor in Spirit",
-        audioUrl: "/assets/music/glad/poor_in_spirit.m4a",
+        audioUrl: "/assets/music/glad/poor_in_spirit.mp3",
       },
 
       {
         id: "whatever-was-to-my-profit",
         title: "Whatever Was to My Profit",
-        audioUrl: "/assets/music/glad/whatever_was_to_my_profit.m4a",
+        audioUrl: "/assets/music/glad/whatever_was_to_my_profit.mp3",
       },
     ],
   },
@@ -85,7 +102,7 @@ export const albums: Album[] = [
         audioUrl: "/assets/music/deep_to_deep/faithful_one.m4a",
         lyrics:
           "Faithful One, we will hope in your unfailing love\nFrom the rising to the setting sun\nWe will hope in Jesus' name\nYou have never failed us\n\nRich in compassion, lavish in love\nHope of the nations, beautiful God\nFull of new mercy day after day\nYou come to save me, Lamb who was slain\n\nAnd for eternity we'll sing this song:\nOur God is love, Our God is love\nThe One who was and is and is to come\nOur God is love, Our God is love\nOur God is love, Our God is love\n\nFaithful One, we will hope in your unfailing love\nFrom the rising to the setting sun\nWe will hope in Jesus' name\nYou have never failed us\nYou have never failed us\nYou will Neve fail us",
-        copyright: "Words & Music © 2010. All rights reserved.",
+        copyright: "Words & Music by Ben Doggett © 2010 Ben Doggett",
       },
 
       {
@@ -94,7 +111,7 @@ export const albums: Album[] = [
         audioUrl: "/assets/music/deep_to_deep/name_above_all_names.m4a",
         lyrics:
           "Jesus, You are God among us\nYou are God's own radience, Light of the world\nJesus, how you condescended\nHoly God of heaven, You are the Lord\n\nYou became nothing, broken to love me\nEven to death on a cross\n\nYou are the Name above all names\nYou are the one Ancient of Days\nYou are the one my heart will praise\nJesus I love you\nAt your name every knee will bow\nAll of creation will cry out\nYou are the one my heart will crown\nJesus I love you, Jesus I love you\n\nJesus, you took on my weakness\nMade in human likeness, servant of all\nJesus, risen and victorious\nGlory in the highest, you are enthroned\n\nYou became nothing, broken to love me\nEven to death on a cross\nTempted as I am, You were obedient\nFaithful and true Son of God\n\nJesus I love you, I want to be like you\nHaving this attitude, serving beside you\nJesus I love you, I want to be with you\nHaving this attitude, in dying I find you",
-        copyright: "Words & Music © 2012. All rights reserved.",
+        copyright: "Words & Music by Ben Doggett © 2012 Ben Doggett",
       },
       {
         id: "more-than-watchmen",
@@ -102,7 +119,7 @@ export const albums: Album[] = [
         audioUrl: "/assets/music/deep_to_deep/more_than_watchmen.m4a",
         lyrics:
           'Out of the depths I call to you, listen to my plea\nOut of the depths I cry the name of Jesus\nBattered by my circumstance, broken at your feet\nBut voice enough to sigh the name of Jesus\n\nWhere else would I go?\nYou\'re my only hope\n\nMore than watchmen wait for morning\nI will wait for you my God\nIn your promise I will glory\nAll my hope is in your love\n\nIf you kept a record of, all our sinful ways\nWho, O Lord, could stand to face your glory\nBut full of mercy, rich in love, you have come to save\nSo in my weary bones I whisper "worthy, you are worthy"\n\nMy soul waits for the break of day\nYou will surely come, as the rising sun\nMy soul longs for the coming dawn\nYou will surely come to us',
-        copyright: "Words & Music © 2010. All rights reserved.",
+        copyright: "Words & Music by Ben Doggett © 2010 Ben Doggett",
       },
       {
         id: "o-the-fathers-love",
@@ -110,7 +127,8 @@ export const albums: Album[] = [
         audioUrl: "/assets/music/deep_to_deep/o_the_fathers_love.m4a",
         lyrics:
           "You kissed my face when I was your foe\nFather you called me home\nI had returned to beg at your feet\nHere you embraced me\n\nO the Father's love is overwhelming\nCovering all my shame\nSee the Father run, his arms embrace me\nLifting me up in his grace\n\nRiches unheard of, squandered in sin\nI spent my inheritance\nNow at the cost of your innocent Son\nYou made a way for us\nYou made a way for us\n\nHeaven and earth, when have you heard\nWhen have you seen such a thing?\nWonder of wonders, the heart of the Father\nYou welcome the prodigal in",
-        copyright: "Words & Music © 2010. All rights reserved.",
+        copyright:
+          "Words & Music by Ben Doggett © 2010 Ben Doggett. All rights reserved.",
       },
       {
         id: "romans-doxology",
@@ -118,7 +136,8 @@ export const albums: Album[] = [
         audioUrl: "/assets/music/deep_to_deep/romans_doxology.m4a",
         lyrics:
           "Oh the depth of the riches of the knowledge and wisdom\nHow unsearchable the judgments of the Lord\nWho has given him counsel? All his ways are untraceable\nWho has known the eternal mind of the Lord\n\nFrom you, Lord, and through you, Lord\nAnd to you, Lord are all things\nYou are the first and you are the last\nAnd yours is all the glory\n\nWhat on earth could we give him, that the Lord should repay it\nAll our rightful obedience is the Lord's\n\nYours is the glory forever and ever\nAnd ever and ever, Amen",
-        copyright: "Words & Music © 2010. All rights reserved.",
+        copyright:
+          "Words & Music by Ben Doggett © 2010 Ben Doggett. All rights reserved.",
       },
     ],
   },
@@ -136,8 +155,9 @@ export const albums: Album[] = [
         title: "Love (1 Corinthians 13)",
         audioUrl: "/assets/music/1_corinthians_13_love.m4a",
         lyrics:
-          "Love is patient, love is kind\nLove lets what I cling to and what I want to die\nLove is full of hope\nLove will never boast\n\nLove in purity and all good things delights\nSo love the Lord your God\nWith all your strenght and mind and heart\nLove your neighbor as yourself\nAnd love your enemy as well\n\nLove is humble, love is strong\nLove can bear all things and love will suffer long\nLove will never fade\nThough the earth give way\nLove will hold you in his everlsting arms\n\nIf I speak with the tongues of angels, but have not love\nIf I give all I own away, but have not love\nEven if I can move the mountains\nI am nothing but a resounding noise",
-        copyright: "© 2024 Artist Portfolio. All rights reserved.",
+          "Love is patient, love is kind\nLove lets what I cling to and what I want to die\nLove is full of hope, love will never boast\nLove in purity and all good things delights\n\nSo love the Lord, Your God\nWith all your strength and mind and heart\nLove your neighbor as yourself\nAnd love your enemy as well\n\nLove is humble, love is strong\nLove can bear all things and love will suffer long\nLove will never fade though the earth give way\nLove will hold you in his everlasting arms\n\nIf I speak with the tongues of angels (but have not love)\nIf I give all I own away (but have not love)\nEven if I could move the mountains\nI am nothing but a resounding noise",
+        copyright:
+          "Words & Music by Ben Doggett © 2021 Ben Doggett. All rights reserved.",
       },
     ],
   },
@@ -154,8 +174,9 @@ export const albums: Album[] = [
         title: "Psalm 23 (Shepherd Me)",
         audioUrl: "/assets/music/psalm_23_shepherd_me.m4a",
         lyrics:
-          "The Lord is my shepherd, I lack nothing\nHe makes me lie down in green pastures\nHe leads me beside quiet waters\nHe refreshes my soul\n\nHe guides me along the right paths\nFor His name's sake\nEven though I walk through the darkest valley\nI will fear no evil, for You are with me\n\nYour rod and Your staff, they comfort me\nYou prepare a table before me\nIn the presence of my enemies\nYou anoint my head with oil\nMy cup overflows\n\nSurely Your goodness and love will follow me\nAll the days of my life\nAnd I will dwell in the house of the Lord\nForever",
-        copyright: "© 2024 Artist Portfolio. All rights reserved.",
+          "The LORD is My Shepherd, I shall not want\nIn pastures of green I will rest\nBeside quiet waters my soul is restored\nI drink and my heart is content\nHe leads me in righteousness\n\nYea, though I walk through the dark of death\nEvil I will not fear\nYour rod and your staff are my confidence\nMy God, you are always near\n\nA table you set in the midst of my foes\nA banquet prepared just for me\nMy head drips with oil and my cup overflows\nI sit at your table and feast\nMy shepherd supplies all I need\n\nSurely goodness and mercy will follow me\nAnd I will dwell in the house of God\nThrough the gates of eternity shepherd me\nAnd I will dwell in your house, O God",
+        copyright:
+          "Words & Music by Ben Doggett © 2015 Ben Doggett. All rights reserved.",
       },
     ],
   },
@@ -171,6 +192,10 @@ export const albums: Album[] = [
         id: "psalm-27-one-thing",
         title: "Psalm 27 (One Thing)",
         audioUrl: "/assets/music/psalm_27_one_thing.m4a",
+        lyrics:
+          'The LORD is my light and my salvation\nThe LORD is the strength of my life\nWhen evil men assail me, they will stumble and fall\nThough the host of hell surround me, I will not fear\n\nOne thing have I asked of the Lord\nAnd this I seek, to see the beauty of my King\nOne thing does my heart long to know\nThat you will hide me in the shelter of your wings\n\nHear me, O LORD, when I cry out\nShow your great grace and answer me\nHide not your love and mercy, turn me not away\nAnd when the host of hell surround me, my heart will say\n\nOne thing have I asked of the Lord\nAnd this I seek, to see the beauty of my King\nOne thing does my heart long to know\nThat you will hide me in the shelter of your wings\n\nMy heart says of you, "Seek his face"\nLORD, your face I seek\nMy heart says of you, "Seek his face"\nLORD, your face I seek\nMy heart says of you, "Seek his face"\nLORD, your face I seek\nMy heart says of you, "Seek his face"\n\nOne thing have I asked of the Lord\nAnd this I seek, to see the beauty of my King\nOne thing does my heart long to know\nThat you will hide me in the shelter of your wings',
+        copyright:
+          "Words & Music by Ben Doggett © 2017 Ben Doggett. All rights reserved.",
       },
     ],
   },
@@ -186,6 +211,10 @@ export const albums: Album[] = [
         id: "psalm-63-better-than-life",
         title: "Psalm 63 (Better Than Life)",
         audioUrl: "/assets/music/psalm_63_better_than_life.m4a",
+        lyrics:
+          "O God, you are my God\nHow earnestly I seek you\nHow desperately I need you\nMy heart and flesh cry out\n\nO God, you are my God\nMy soul is dry and weary\nMy hope is in your mercy\nOh how I need you now\n\nI have seen you in the sanctuary\nI have felt you like a cloud of glory fall\nLet my soul remember\nBread of heaven for the hungry spirit\nHoly presence of an unrelenting love\nLet my soul remember\n\nLet my soul remember\nYour love is better\nLet my soul remember\nYour love is better than life",
+        copyright:
+          "Words & Music by Ben Doggett © 2024 Ben Doggett. All rights reserved.",
       },
     ],
   },
@@ -201,6 +230,8 @@ export const albums: Album[] = [
         id: "son-of-glory-john-1",
         title: "Son of Glory (John 1)",
         audioUrl: "/assets/music/son_of_glory_john_1.m4a",
+        lyrics:
+          "In the beginning was the Word\nAnd the Word was with and was God\nIn the beginning was the Word\nAnd all things were made by and through him\n\nIn the beginning was the Light\nAnd the Light was life to all me\nIn the beginning was the Light\nThe darkness has not overcome him\n\nHe has made his home here\nHeaven robed in flesh and bone\nAnd we have seen his glory\nThe glory of the only Son of God\n\nIn the beginning was the Word\nAnd the Word was with and was God\nIn the beginning was the Word\nAnd all things were made by and through him\n\nIn the beginning was the Light\nAnd the Light was life to all me\nIn the beginning was the Light\nThe darkness has not overcome him\n\nHe has made his home here\nHeaven robed in flesh and bone\nAnd we have seen his glory\nThe glory of the One and only\nHe has made his home here\nHeaven robed in flesh and bone\nAnd we have seen his glory\nThe glory of the only Son of God\n\nJesus Christ, Light of life\nAncient of days, begotten not made\nJesus Christ, Light of life\nAncient of days, begotten not made\nJesus Christ, Light of life\nAncient of days, begotten not made\nJesus Christ, Light of life\nAncient of days, begotten not made\n\nHe has made his home here\nHeaven robed in flesh and bone\nAnd we have seen his glory\nThe glory of the One and only\nHe has made his home here\nHeaven robed in flesh and bone\nAnd we have seen his glory\nThe glory of the only Son of God\n\nOne and only Son of glory",
       },
     ],
   },
