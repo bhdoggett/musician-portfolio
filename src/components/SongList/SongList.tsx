@@ -86,17 +86,16 @@ export const SongList: React.FC<SongListProps> = ({
   albumType,
   album,
 }) => {
-  const [expandedSongs, setExpandedSongs] = useState<Set<string>>(new Set());
+  const [expandedSongId, setExpandedSongId] = useState<string | null>(null);
 
   const toggleSong = (songId: string) => {
-    setExpandedSongs((prev) => {
-      const newSet = new Set(prev);
-      if (newSet.has(songId)) {
-        newSet.delete(songId);
-      } else {
-        newSet.add(songId);
+    setExpandedSongId((prev) => {
+      // If clicking the same song that's already expanded, collapse it
+      if (prev === songId) {
+        return null;
       }
-      return newSet;
+      // Otherwise, expand this song (and close any other)
+      return songId;
     });
   };
 
@@ -108,7 +107,7 @@ export const SongList: React.FC<SongListProps> = ({
           song={song}
           album={album}
           index={index}
-          isExpanded={expandedSongs.has(song.id)}
+          isExpanded={expandedSongId === song.id}
           onToggle={() => toggleSong(song.id)}
         />
       ))}

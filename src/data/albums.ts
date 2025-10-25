@@ -72,18 +72,24 @@ export const albums: Album[] = [
         audioUrl: "/assets/music/glad/a_whole_years_wages.mp3",
         lyrics:
           "I brought my alabaster Jar, but it's not broken yet\nAnd there's still time for me to give you something less extravagant\n\nA whole year's wages\nA whole life's praises\nAre you worth this?\nAre you worth this Lord?\n\nI hear the murmors of the crowd\nBut still I venture in\nWhen my Jesus is before me\nShould I stop for fear of men?\n\nA whole year's wages\nAnd all their faces\nAre you worth this?\nAre you worth this, Lord?\n\nHow can I give what costs me nothing\nWhen you gave up your life\nAnd so I bring this costly offering\nA living sacrifice\n\nAnd so I pour upon your head\nThe contents of my broken heart\nAnd there is no turning back now\nI am forever yours, O God\n\nA whole year's wages\nA whole life's praisesYou are worth this\nYou are worth this, Lord",
+        copyright: "Words & Music by Ben Doggett © 2012 Ben Doggett",
       },
 
       {
         id: "poor-in-spirit",
         title: "Poor in Spirit",
         audioUrl: "/assets/music/glad/poor_in_spirit.mp3",
+        lyrics:
+          "Whom have I in heaven beside you?\nAnd the earth has nothing I desire\nBut it is good just to be near you\nIt is good to come and die\n\nWhen I have nothing left to boast in\n'Cause I've got nothing to my name\nThen I'll have something to rejoice in\nAnd you, you can have all my praise\n\n'Cause I am broken and poor, but such is the kingdom, Lord\nYou are our only treasure\nAnd I will set my eyes high on the humble Jesus Christ\nHis riches know no measure\n\nYou are my portion and my refuge\though my heart and flesh grow faint\nWhere have I to run but to you?\nYou are the one thing that remains\n\nHis riches know no measure\nHis riches know no measure",
+        copyright: "Words & Music by Ben Doggett © 2011 Ben Doggett",
       },
 
       {
         id: "whatever-was-to-my-profit",
         title: "Whatever Was to My Profit",
         audioUrl: "/assets/music/glad/whatever_was_to_my_profit.mp3",
+        lyrics:
+          "Whatever was to my profit, I now consider loss\nAnd everything self-righteous, I nail it to the cross\nTo know you in your death, O Lord, and rise with you again\nTo know you in your suffering and then my life begins\n\nEvery other lover cannot compare\nAnd anything this world offers will perish and pale\nIn the light of your glory\nIn the glow of your beauty\n\nOnly one thing remains now, to know you all the more\nThere's only one place to be found, abiding in the Lord\nI throw off every hindrance, I'm giving you my eyes\nI run the race before me 'cause Jesus is the prize ",
       },
     ],
   },
