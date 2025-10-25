@@ -1,0 +1,50 @@
+.streamingLinks {
+  display: inline-flex;
+  align-items: center;
+}
+
+.platformList {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.platformLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  padding: 6px;
+  background: var(--surface-white);
+  border: 1px solid rgba(139, 115, 85, 0.2);
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--primary-earth);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.platformLink:hover {
+  background: var(--neutral-cream);
+  border-color: var(--primary-earth);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(139, 115, 85, 0.2);
+}
+
+.platformLink:focus {
+  outline: none;
+  border-color: var(--primary-earth);
+  box-shadow: 0 0 0 2px rgba(139, 115, 85, 0.3);
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.platformLink:hover .icon {
+  color: var(--accent-terracotta);
+}

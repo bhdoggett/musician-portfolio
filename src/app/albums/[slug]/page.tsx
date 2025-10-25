@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { getAlbumById, getAllAlbums } from "@/data/albums";
 import { SingleLayout, EPLayout } from "@/components/AlbumLayouts";
+import StreamingLinks from "@/components/StreamingLinks";
 import styles from "./page.module.css";
 
 // Generate static params for all albums at build time
@@ -81,7 +82,10 @@ export default async function AlbumPage({ params }: AlbumPageProps) {
           </div>
 
           <div className={styles.albumInfo}>
-            <h1 className={styles.albumTitle}>{album.title}</h1>
+            <div className={styles.titleRow}>
+              <h1 className={styles.albumTitle}>{album.title}</h1>
+              <StreamingLinks streamingLinks={album.streamingLinks} />
+            </div>
             {album.description && (
               <p className={styles.albumDescription}>{album.description}</p>
             )}

@@ -92,7 +92,7 @@
   - Handle multiple audio instances and playback conflicts
   - _Requirements: 5.5_
 
-- [ ] 13. Add streaming platform links and icons
+- [x] 13. Add streaming platform links and icons
 
   - Update Album interface in types to include bandcamp, spotify, and appleMusic URL properties
   - Modify data/albums.ts to include dummy URLs for all streaming platforms

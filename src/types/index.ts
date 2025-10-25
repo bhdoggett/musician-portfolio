@@ -16,6 +16,11 @@ export interface Album {
   coverArt: string;
   songs: Song[];
   description?: string;
+  streamingLinks?: {
+    bandcamp?: string;
+    spotify?: string;
+    appleMusic?: string;
+  };
 }
 
 // Audio player related types

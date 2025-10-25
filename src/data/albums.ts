@@ -9,6 +9,11 @@ export const albums: Album[] = [
     type: "ep",
     coverArt: "/assets/images/glad.jpeg",
     description: "Songs that mark a season of fighting for joy",
+    streamingLinks: {
+      bandcamp: "https://bendoggett.bandcamp.com/album/glad",
+      spotify: "https://open.spotify.com/album/glad-ep",
+      appleMusic: "https://music.apple.com/album/glad-ep",
+    },
     songs: [
       {
         id: "glad",
@@ -101,6 +106,11 @@ export const albums: Album[] = [
     type: "ep",
     coverArt: "/assets/images/deep_to_deep.jpg",
     description: "An EP exploring the depths of faith and worship",
+    streamingLinks: {
+      bandcamp: "https://bendoggett.bandcamp.com/album/deep-to-deep",
+      spotify: "https://open.spotify.com/album/deep-to-deep-ep",
+      appleMusic: "https://music.apple.com/album/deep-to-deep-ep",
+    },
     songs: [
       {
         id: "faithful-one",
@@ -155,6 +165,11 @@ export const albums: Album[] = [
     type: "single",
     coverArt: "/assets/images/love_1_corinthians_13.jpg",
     description: "A musical meditation on the love chapter",
+    streamingLinks: {
+      bandcamp: "https://bendoggett.bandcamp.com/track/love-1-corinthians-13",
+      spotify: "https://open.spotify.com/track/love-1-corinthians-13",
+      appleMusic: "https://music.apple.com/song/love-1-corinthians-13",
+    },
     songs: [
       {
         id: "love-1-corinthians-13",
@@ -174,6 +189,11 @@ export const albums: Album[] = [
     type: "single",
     coverArt: "/assets/images/psalm_23.jpg",
     description: "The Lord is my shepherd, I shall not want",
+    streamingLinks: {
+      bandcamp: "https://bendoggett.bandcamp.com/track/psalm-23-shepherd-me",
+      spotify: "https://open.spotify.com/track/psalm-23-shepherd-me",
+      appleMusic: "https://music.apple.com/song/psalm-23-shepherd-me",
+    },
     songs: [
       {
         id: "psalm-23-shepherd-me",
@@ -193,6 +213,11 @@ export const albums: Album[] = [
     type: "single",
     coverArt: "/assets/images/psalm_27.jpg",
     description: "One thing I ask from the Lord, this only do I seek",
+    streamingLinks: {
+      bandcamp: "https://bendoggett.bandcamp.com/track/psalm-27-one-thing",
+      spotify: "https://open.spotify.com/track/psalm-27-one-thing",
+      appleMusic: "https://music.apple.com/song/psalm-27-one-thing",
+    },
     songs: [
       {
         id: "psalm-27-one-thing",
@@ -212,6 +237,12 @@ export const albums: Album[] = [
     type: "single",
     coverArt: "/assets/images/psalm_63.jpg",
     description: "Your love is better than life, my lips will glorify you",
+    streamingLinks: {
+      bandcamp:
+        "https://bendoggett.bandcamp.com/track/psalm-63-better-than-life",
+      spotify: "https://open.spotify.com/track/psalm-63-better-than-life",
+      appleMusic: "https://music.apple.com/song/psalm-63-better-than-life",
+    },
     songs: [
       {
         id: "psalm-63-better-than-life",
@@ -231,6 +262,11 @@ export const albums: Album[] = [
     type: "single",
     coverArt: "/assets/images/son_of_glory.jpg",
     description: "In the beginning was the Word, and the Word was with God",
+    streamingLinks: {
+      bandcamp: "https://bendoggett.bandcamp.com/track/son-of-glory-john-1",
+      spotify: "https://open.spotify.com/track/son-of-glory-john-1",
+      appleMusic: "https://music.apple.com/song/son-of-glory-john-1",
+    },
     songs: [
       {
         id: "son-of-glory-john-1",
