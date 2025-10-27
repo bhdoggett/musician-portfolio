@@ -48,3 +48,16 @@
 .platformLink:hover .icon {
   color: var(--accent-terracotta);
 }
+
+/* Apple Music icon - slightly larger */
+.appleMusicIcon {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+.platformLink:hover .appleMusicIcon {
+  color: var(--accent-terracotta);
+}
