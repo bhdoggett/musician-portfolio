@@ -14,7 +14,7 @@ The application follows a component-based architecture with CSS modules for styl
 src/
 ├── app/
 │   ├── layout.tsx              # Root layout with global styles
-│   ├── page.tsx                # Home/Discography page
+│   ├── page.tsx                # Home/Releases page
 │   ├── globals.css             # Global CSS variables and base styles
 │   └── releases/
 │       └── [slug]/
@@ -153,7 +153,7 @@ const releases: release[] = [
 
 ### Routing Strategy
 
-- **Home Page** (`/`): Discography grid with all release cards
+- **Home Page** (`/`): Releases grid with all release cards
 - **release Pages** (`/releases/[slug]`): Dynamic routing based on release ID
 - **Static Generation**: Pre-render all release pages at build time
 
@@ -187,7 +187,7 @@ const releases: release[] = [
 
 ### Integration Testing
 
-- End-to-end navigation flow from discography to release pages
+- End-to-end navigation flow from Releases to release pages
 - Audio playback across different browsers and devices
 - Responsive design testing across viewport sizes
 

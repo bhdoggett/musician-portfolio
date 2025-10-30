@@ -63,8 +63,8 @@ export default async function ReleasePage({ params }: ReleasePageProps) {
       <div className={styles.releasePage}>
         {/* Navigation */}
         <nav className={styles.navigation}>
-          <Link href="/discography" className={styles.backLink}>
-            ← Back to Discography
+          <Link href="/releases" className={styles.backLink}>
+            ← Back to Releases
           </Link>
         </nav>
 

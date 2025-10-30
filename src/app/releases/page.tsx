@@ -8,7 +8,7 @@ import styles from "./page.module.css";
 
 // Note: Metadata export doesn't work in client components,
 // but we'll add it via next/head or move to a layout if needed
-export default function DiscographyPage() {
+export default function ReleasesPage() {
   const router = useRouter();
 
   const handlereleaseClick = (releaseId: string) => {
@@ -40,7 +40,7 @@ export default function DiscographyPage() {
   return (
     <>
       <Script
-        id="discography-structured-data"
+        id="Releases-structured-data"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(structuredData),
@@ -48,7 +48,7 @@ export default function DiscographyPage() {
       />
       <div className="container">
         <header className={styles.header}>
-          <h1 className={styles.title}>Discography</h1>
+          <h1 className={styles.title}>Releases</h1>
         </header>
 
         <main className={styles.main}>

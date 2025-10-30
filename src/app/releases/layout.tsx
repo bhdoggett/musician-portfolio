@@ -1,34 +1,34 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Discography",
+  title: "Releases",
   description:
     "Explore a collection of musical works exploring faith, worship, and the depths of God's love. Listen to EPs, singles, and worship songs.",
   keywords: [
     "worship music",
     "christian music",
     "faith",
-    "discography",
+    "Releases",
     "releases",
     "EPs",
     "singles",
   ],
   openGraph: {
-    title: "Discography | Artist Portfolio",
+    title: "Releases | Artist Portfolio",
     description:
       "Explore a collection of musical works exploring faith, worship, and the depths of God's love.",
     type: "website",
-    url: "/discography",
+    url: "/Releases",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Discography | Artist Portfolio",
+    title: "Releases | Artist Portfolio",
     description:
       "Explore a collection of musical works exploring faith, worship, and the depths of God's love.",
   },
 };
 
-export default function DiscographyLayout({
+export default function ReleasesLayout({
   children,
 }: {
   children: React.ReactNode;

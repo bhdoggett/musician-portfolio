@@ -2,12 +2,12 @@
 
 ## Introduction
 
-An artist portfolio website showcasing musical works with a modern organic design. The system provides a main discography page displaying release cards that link to dedicated release pages. Each release page displays different content based on whether it's a single or EP, with interactive song lists, lyrics display, and audio playback functionality.
+An artist portfolio website showcasing musical works with a modern organic design. The system provides a main Releases page displaying release cards that link to dedicated release pages. Each release page displays different content based on whether it's a single or EP, with interactive song lists, lyrics display, and audio playback functionality.
 
 ## Glossary
 
 - **Portfolio_System**: The complete artist portfolio website
-- **Discography_Page**: Main page displaying all releases as clickable cards
+- **Releases_Page**: Main page displaying all releases as clickable cards
 - **release_Card**: Interactive component displaying release cover art that navigates to release details
 - **release_Page**: Dedicated page for individual releases with track listings and playback
 - **Song_Component**: Interactive element that expands to show lyrics and audio player
@@ -23,12 +23,12 @@ An artist portfolio website showcasing musical works with a modern organic desig
 
 ### Requirement 1
 
-**User Story:** As a visitor, I want to view all releases on a main discography page, so that I can browse the artist's complete catalog
+**User Story:** As a visitor, I want to view all releases on a main Releases page, so that I can browse the artist's complete catalog
 
 #### Acceptance Criteria
 
-1. THE Portfolio_System SHALL display a discography page as the main navigation destination
-2. WHEN the discography page loads, THE Portfolio_System SHALL render release cards for each available release
+1. THE Portfolio_System SHALL display a Releases page as the main navigation destination
+2. WHEN the Releases page loads, THE Portfolio_System SHALL render release cards for each available release
 3. THE Portfolio_System SHALL use cover art images as the primary visual element for each release_Card
 4. THE Portfolio_System SHALL arrange release_Cards in a responsive grid layout
 5. WHEN a user clicks an release_Card, THE Portfolio_System SHALL navigate to the corresponding release_Page
@@ -91,7 +91,7 @@ An artist portfolio website showcasing musical works with a modern organic desig
 2. THE Portfolio_System SHALL use global CSS for consistent design elements across pages
 3. THE Portfolio_System SHALL apply modern organic design principles including natural curves and earth tones
 4. THE Portfolio_System SHALL ensure responsive design that works across desktop and mobile devices
-5. THE Portfolio_System SHALL maintain visual consistency between the discography page and individual release_Pages
+5. THE Portfolio_System SHALL maintain visual consistency between the Releases page and individual release_Pages
 
 ### Requirement 7
 
@@ -115,7 +115,7 @@ An artist portfolio website showcasing musical works with a modern organic desig
 2. THE Portfolio_System SHALL include Jest unit tests for the Song_Component that verify expansion/collapse functionality, lyrics display, and audio player integration
 3. THE Portfolio_System SHALL include Jest unit tests for the Audio_Player component that verify Tone.js integration, playback controls, and state management
 4. THE Portfolio_System SHALL include Jest integration tests for release_Pages that verify correct rendering based on release type (Single vs EP)
-5. THE Portfolio_System SHALL include Jest tests for the Discography_Page that verify release card rendering and grid layout functionality
+5. THE Portfolio_System SHALL include Jest tests for the Releases_Page that verify release card rendering and grid layout functionality
 6. THE Portfolio_System SHALL achieve minimum 80% code coverage across all tested components
 7. THE Portfolio_System SHALL include Jest snapshot tests for component rendering consistency
 8. THE Portfolio_System SHALL include Jest tests that verify responsive design behavior and CSS module integration

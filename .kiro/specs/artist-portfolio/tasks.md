@@ -29,7 +29,7 @@
   - Integrate Next.js Image component for optimized release cover display
   - _Requirements: 1.3, 2.1, 6.5_
 
-- [x] 5. Create discography page layout
+- [x] 5. Create Releases page layout
 
   - Update home page to display release cards in responsive grid
   - Implement release card click navigation to individual release pages
@@ -41,7 +41,7 @@
   - Create dynamic route structure for individual release pages
   - Build release page layout with cover art and metadata display
   - Implement different layouts for singles vs EPs based on release type
-  - Add navigation back to discography
+  - Add navigation back to Releases
   - _Requirements: 2.3, 2.5, 7.1, 7.4_
 
 - [x] 7. Build AudioPlayer component with Tone.js

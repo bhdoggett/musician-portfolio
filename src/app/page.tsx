@@ -14,7 +14,7 @@ export default function Home() {
 
         <div className={styles.ctas}>
           <Link
-            href="/discography"
+            href="/Releases"
             className={`btn btn-primary ${styles.primary}`}
           >
             Releases

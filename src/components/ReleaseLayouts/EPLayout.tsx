@@ -12,11 +12,7 @@ interface EPLayoutProps {
 export const EPLayout: React.FC<EPLayoutProps> = ({ release }) => {
   return (
     <div className={styles.epLayout}>
-      <SongList
-        songs={release.songs}
-        releaseType={release.type}
-        release={release}
-      />
+      <SongList songs={release.songs} release={release} />
     </div>
   );
 };

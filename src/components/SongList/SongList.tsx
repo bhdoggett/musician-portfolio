@@ -7,7 +7,6 @@ import styles from "./SongList.module.css";
 
 interface SongListProps {
   songs: Song[];
-  releaseType: "single" | "ep";
   release: Release;
 }
 
@@ -81,11 +80,7 @@ const SongItem: React.FC<SongItemProps> = ({
   );
 };
 
-export const SongList: React.FC<SongListProps> = ({
-  songs,
-  releaseType,
-  release,
-}) => {
+export const SongList: React.FC<SongListProps> = ({ songs, release }) => {
   const [expandedSongId, setExpandedSongId] = useState<string | null>(null);
 
   const toggleSong = (songId: string) => {
