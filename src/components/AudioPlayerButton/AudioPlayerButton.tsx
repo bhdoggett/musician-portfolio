@@ -2,19 +2,19 @@
 
 import React from "react";
 import { useAudio } from "@/contexts/AudioContext";
-import { Song, Album } from "@/types";
+import { Song, release } from "@/types";
 import styles from "./AudioPlayerButton.module.css";
 
 interface AudioPlayerButtonProps {
   song: Song;
-  album: Album;
+  release: release;
   title: string;
   showTitle?: boolean;
 }
 
 export const AudioPlayerButton: React.FC<AudioPlayerButtonProps> = ({
   song,
-  album,
+  release,
   title,
   showTitle = true,
 }) => {
@@ -28,7 +28,7 @@ export const AudioPlayerButton: React.FC<AudioPlayerButtonProps> = ({
     if (isThisTrackCurrent && state.isPlaying) {
       pauseTrack();
     } else {
-      playTrack(song, album);
+      playTrack(song, release);
     }
   };
 

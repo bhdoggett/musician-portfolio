@@ -24,8 +24,8 @@
   padding-bottom: var(--spacing-3xl);
 }
 
-.albumGrid {
-  margin: var(--spacing-xl);
+.releaseGrid {
+  margin: var(--spacing-2xl);
   margin-top: var(--spacing-xl);
 }
 

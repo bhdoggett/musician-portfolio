@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "christian music",
     "faith",
     "discography",
-    "albums",
+    "releases",
     "EPs",
     "singles",
   ],

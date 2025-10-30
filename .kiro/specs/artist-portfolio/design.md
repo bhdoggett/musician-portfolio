@@ -16,13 +16,13 @@ src/
 │   ├── layout.tsx              # Root layout with global styles
 │   ├── page.tsx                # Home/Discography page
 │   ├── globals.css             # Global CSS variables and base styles
-│   └── albums/
+│   └── releases/
 │       └── [slug]/
-│           └── page.tsx        # Dynamic album pages
+│           └── page.tsx        # Dynamic release pages
 ├── components/
-│   ├── AlbumCard/
-│   │   ├── AlbumCard.tsx       # Reusable album card component
-│   │   └── AlbumCard.module.css
+│   ├── ReleaseCard/
+│   │   ├── ReleaseCard.tsx       # Reusable release card component
+│   │   └── ReleaseCard.module.css
 │   ├── AudioPlayer/
 │   │   ├── AudioPlayer.tsx     # Tone.js-powered audio player
 │   │   └── AudioPlayer.module.css
@@ -33,7 +33,7 @@ src/
 │       ├── Navigation.tsx      # Site navigation
 │       └── Navigation.module.css
 ├── data/
-│   └── albums.ts               # Album metadata and configuration
+│   └── releases.ts               # release metadata and configuration
 ├── types/
 │   └── index.ts                # TypeScript type definitions
 └── utils/
@@ -53,17 +53,17 @@ src/
 
 ### Core Components
 
-#### AlbumCard Component
+#### ReleaseCard Component
 
 ```typescript
-interface AlbumCardProps {
-  album: Album;
+interface ReleaseCardProps {
+  release: release;
   onClick: () => void;
 }
 ```
 
-- Displays album cover art as primary visual element
-- Handles click navigation to album pages
+- Displays release cover art as primary visual element
+- Handles click navigation to release pages
 - Responsive design with hover effects
 - Prioritizes JPG format for optimal web performance
 
@@ -87,7 +87,7 @@ interface AudioPlayerProps {
 ```typescript
 interface SongListProps {
   songs: Song[];
-  albumType: "single" | "ep";
+  releaseType: "single" | "ep";
 }
 ```
 
@@ -98,10 +98,10 @@ interface SongListProps {
 
 ### Data Models
 
-#### Album Interface
+#### release Interface
 
 ```typescript
-interface Album {
+interface release {
   id: string;
   title: string;
   type: "single" | "ep";
@@ -126,12 +126,12 @@ interface Song {
 
 ## Data Models
 
-### Album Configuration
+### release Configuration
 
-The system uses a centralized album configuration that maps to the existing asset structure:
+The system uses a centralized release configuration that maps to the existing asset structure:
 
 ```typescript
-const albums: Album[] = [
+const releases: release[] = [
   {
     id: "deep-to-deep",
     title: "Deep to Deep",
@@ -147,15 +147,15 @@ const albums: Album[] = [
       // ... additional tracks
     ],
   },
-  // ... additional albums
+  // ... additional releases
 ];
 ```
 
 ### Routing Strategy
 
-- **Home Page** (`/`): Discography grid with all album cards
-- **Album Pages** (`/albums/[slug]`): Dynamic routing based on album ID
-- **Static Generation**: Pre-render all album pages at build time
+- **Home Page** (`/`): Discography grid with all release cards
+- **release Pages** (`/releases/[slug]`): Dynamic routing based on release ID
+- **Static Generation**: Pre-render all release pages at build time
 
 ## Error Handling
 
@@ -167,27 +167,27 @@ const albums: Album[] = [
 
 ### Navigation Errors
 
-- 404 handling for invalid album slugs
-- Fallback to home page when album data is missing
+- 404 handling for invalid release slugs
+- Fallback to home page when release data is missing
 - Loading states during navigation transitions
 
 ### Asset Loading
 
 - Progressive image loading with blur placeholders
-- Primary use of JPG format for album covers (optimal for photographic content)
+- Primary use of JPG format for release covers (optimal for photographic content)
 - Lazy loading for audio files until user interaction
 
 ## Testing Strategy
 
 ### Component Testing
 
-- Unit tests for AlbumCard click handling and prop rendering
+- Unit tests for ReleaseCard click handling and prop rendering
 - AudioPlayer integration tests with mocked Tone.js
 - SongList expand/collapse functionality testing
 
 ### Integration Testing
 
-- End-to-end navigation flow from discography to album pages
+- End-to-end navigation flow from discography to release pages
 - Audio playback across different browsers and devices
 - Responsive design testing across viewport sizes
 
@@ -251,4 +251,4 @@ const albums: Album[] = [
 
 - Dynamic imports for Tone.js to reduce initial bundle size
 - Tree shaking for unused CSS modules
-- Code splitting at the album page level
+- Code splitting at the release page level

@@ -1,10 +1,10 @@
 "use client";
 
 import Image from "next/image";
-import { AlbumCardProps } from "@/types";
-import styles from "./AlbumCard.module.css";
+import { ReleaseCardProps } from "@/types";
+import styles from "./ReleaseCard.module.css";
 
-export default function AlbumCard({ album, onClick }: AlbumCardProps) {
+export default function ReleaseCard({ release, onClick }: ReleaseCardProps) {
   const handleClick = () => {
     onClick();
   };
@@ -18,17 +18,17 @@ export default function AlbumCard({ album, onClick }: AlbumCardProps) {
 
   return (
     <div
-      className={styles.albumCard}
+      className={styles.ReleaseCard}
       onClick={handleClick}
       onKeyDown={handleKeyDown}
       role="button"
       tabIndex={0}
-      aria-label={`View ${album.title} ${album.type}`}
+      aria-label={`View ${release.title} ${release.type}`}
     >
       <div className={styles.imageContainer}>
         <Image
-          src={album.coverArt}
-          alt={`${album.title} album cover`}
+          src={release.coverArt}
+          alt={`${release.title} release cover`}
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className={styles.coverImage}

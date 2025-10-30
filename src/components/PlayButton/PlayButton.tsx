@@ -2,18 +2,18 @@
 
 import React from "react";
 import { useAudio } from "@/contexts/AudioContext";
-import { Song, Album } from "@/types";
+import { Song, Release } from "@/types";
 import styles from "./PlayButton.module.css";
 
 interface PlayButtonProps {
   song: Song;
-  album: Album;
+  release: Release;
   size?: "small" | "medium" | "large";
 }
 
 export const PlayButton: React.FC<PlayButtonProps> = ({
   song,
-  album,
+  release,
   size = "medium",
 }) => {
   const { state, playTrack, pauseTrack, isCurrentTrack } = useAudio();
@@ -26,7 +26,7 @@ export const PlayButton: React.FC<PlayButtonProps> = ({
     if (isThisTrackCurrent && state.isPlaying) {
       pauseTrack();
     } else {
-      playTrack(song, album);
+      playTrack(song, release);
     }
   };
 

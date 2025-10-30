@@ -1,4 +1,4 @@
-.albumCard {
+.ReleaseCard {
   display: flex;
   flex-direction: column;
   background-color: var(--surface);
@@ -11,23 +11,23 @@
   transition: all var(--transition-base);
   position: relative;
   aspect-ratio: 1;
-  margin: var(--spacing-lg);
+  /* margin: var(--spacing-lg); */
   /* min-height: 320px; */
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
 }
 
-.albumCard:hover {
+.ReleaseCard:hover {
   box-shadow: var(--shadow-xl);
   transform: translateY(-4px);
 }
 
-.albumCard:focus-visible {
+.ReleaseCard:focus-visible {
   outline: 3px solid var(--accent);
   outline-offset: 2px;
 }
 
-.albumCard:active {
+.ReleaseCard:active {
   transform: translateY(-2px);
   transition: transform var(--transition-fast);
 }
@@ -51,7 +51,7 @@
   transition: transform var(--transition-slow);
 }
 
-.albumCard:hover .coverImage {
+.ReleaseCard:hover .coverImage {
   filter: brightness(1.1);
 }
 
@@ -74,7 +74,7 @@
   transition: opacity var(--transition-base);
 }
 
-.albumCard:hover .overlay {
+.ReleaseCard:hover .overlay {
   opacity: 1;
 }
 
@@ -92,7 +92,7 @@
   transition: transform var(--transition-base);
 }
 
-.albumCard:hover .playIcon {
+.ReleaseCard:hover .playIcon {
   transform: scale(1);
 }
 
@@ -141,7 +141,7 @@
 
 /* Responsive Design */
 @media (max-width: 767px) {
-  .albumCard {
+  .ReleaseCard {
     /* min-height removed to respect aspect-ratio: 1 */
   }
 
@@ -168,28 +168,28 @@
     opacity: 0.8;
   }
 
-  .albumCard:active {
+  .ReleaseCard:active {
     transform: translateY(0px) scale(0.98);
   }
 
   /* Reduce hover effects on mobile */
-  .albumCard:hover {
+  .ReleaseCard:hover {
     transform: translateY(-2px);
   }
 
-  .albumCard:hover .coverImage {
+  .ReleaseCard:hover .coverImage {
     filter: brightness(1.05);
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
-  .albumCard {
+  .ReleaseCard {
     /* min-height removed to respect aspect-ratio: 1 */
   }
 }
 
 @media (min-width: 1024px) {
-  .albumCard {
+  .ReleaseCard {
     /* min-height removed to respect aspect-ratio: 1 */
   }
 
@@ -204,25 +204,25 @@
 
 /* Accessibility improvements */
 @media (prefers-reduced-motion: reduce) {
-  .albumCard,
+  .ReleaseCard,
   .coverImage,
   .overlay,
   .playIcon {
     transition: none;
   }
 
-  .albumCard:hover {
+  .ReleaseCard:hover {
     transform: none;
   }
 
-  .albumCard:hover .coverImage {
+  .ReleaseCard:hover .coverImage {
     transform: none;
   }
 }
 
 /* High contrast mode support */
 @media (prefers-contrast: high) {
-  .albumCard {
+  .ReleaseCard {
     border: 2px solid var(--text-primary);
   }
 

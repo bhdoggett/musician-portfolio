@@ -1,19 +1,19 @@
 "use client";
 
 import React, { useState } from "react";
-import { Song, Album } from "@/types";
+import { Song, Release } from "@/types";
 import { PlayButton } from "@/components/PlayButton";
 import styles from "./SongList.module.css";
 
 interface SongListProps {
   songs: Song[];
-  albumType: "single" | "ep";
-  album: Album;
+  releaseType: "single" | "ep";
+  release: Release;
 }
 
 interface SongItemProps {
   song: Song;
-  album: Album;
+  release: Release;
   index: number;
   isExpanded: boolean;
   onToggle: () => void;
@@ -21,7 +21,7 @@ interface SongItemProps {
 
 const SongItem: React.FC<SongItemProps> = ({
   song,
-  album,
+  release,
   index,
   isExpanded,
   onToggle,
@@ -31,7 +31,7 @@ const SongItem: React.FC<SongItemProps> = ({
       <div className={styles.songHeader}>
         <div className={styles.songInfo}>
           <span className={styles.trackNumber}>{index + 1}</span>
-          <PlayButton song={song} album={album} size="small" />
+          <PlayButton song={song} release={release} size="small" />
           <h3 className={styles.songTitle} onClick={onToggle}>
             {song.title}
           </h3>
@@ -83,8 +83,8 @@ const SongItem: React.FC<SongItemProps> = ({
 
 export const SongList: React.FC<SongListProps> = ({
   songs,
-  albumType,
-  album,
+  releaseType,
+  release,
 }) => {
   const [expandedSongId, setExpandedSongId] = useState<string | null>(null);
 
@@ -105,7 +105,7 @@ export const SongList: React.FC<SongListProps> = ({
         <SongItem
           key={song.id}
           song={song}
-          album={album}
+          release={release}
           index={index}
           isExpanded={expandedSongId === song.id}
           onToggle={() => toggleSong(song.id)}

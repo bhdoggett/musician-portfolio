@@ -9,7 +9,7 @@ export interface Song {
   duration?: number;
 }
 
-export interface Album {
+export interface Release {
   id: string;
   title: string;
   type: "single" | "ep";
@@ -39,13 +39,13 @@ export interface AudioPlayerState {
 }
 
 // Component prop types
-export interface AlbumCardProps {
-  album: Album;
+export interface ReleaseCardProps {
+  release: Release;
   onClick: () => void;
 }
 
 export interface SongListProps {
   songs: Song[];
-  albumType: "single" | "ep";
-  album: Album;
+  releaseType: "single" | "ep";
+  release: Release;
 }

@@ -1,16 +1,15 @@
 import Link from "next/link";
 import styles from "./page.module.css";
+import { NavBar } from "../components/NavBar/NavBar";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
+    <div>
+      <NavBar />
       <main className={styles.main}>
         <div className={styles.intro}>
-          <h1>Welcome</h1>
-          <p>
-            A collection of musical works exploring faith, worship, and the
-            depths of God's love.
-          </p>
+          <h1>Ben Doggett</h1>
+          <p></p>
         </div>
 
         <div className={styles.ctas}>
@@ -18,7 +17,13 @@ export default function Home() {
             href="/discography"
             className={`btn btn-primary ${styles.primary}`}
           >
-            View Discography
+            Releases
+          </Link>
+          <Link
+            href="/reminisce"
+            className={`btn btn-primary ${styles.primary}`}
+          >
+            Reminisce
           </Link>
         </div>
       </main>

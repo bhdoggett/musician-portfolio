@@ -7,11 +7,11 @@
   - Configure TypeScript types for Tone.js integration
   - _Requirements: 5.2, 5.3_
 
-- [x] 2. Create core data models and album configuration
+- [x] 2. Create core data models and release configuration
 
-  - Define TypeScript interfaces for Album and Song types
-  - Create centralized album data configuration mapping to existing assets
-  - Implement album data with all existing albums (Deep to Deep EP, Glad EP, and singles)
+  - Define TypeScript interfaces for release and Song types
+  - Create centralized release data configuration mapping to existing assets
+  - Implement release data with all existing releases (Deep to Deep EP, Glad EP, and singles)
   - _Requirements: 1.2, 2.4, 7.2_
 
 - [x] 3. Implement global styling and design system
@@ -21,26 +21,26 @@
   - Implement responsive breakpoints and base layout styles
   - _Requirements: 6.1, 6.2, 6.3, 6.4_
 
-- [x] 4. Build AlbumCard component
+- [x] 4. Build ReleaseCard component
 
-  - Create reusable AlbumCard component with TypeScript props
+  - Create reusable ReleaseCard component with TypeScript props
   - Implement CSS module styling with organic design principles
   - Add hover effects and responsive behavior
-  - Integrate Next.js Image component for optimized album cover display
+  - Integrate Next.js Image component for optimized release cover display
   - _Requirements: 1.3, 2.1, 6.5_
 
 - [x] 5. Create discography page layout
 
-  - Update home page to display album cards in responsive grid
-  - Implement album card click navigation to individual album pages
+  - Update home page to display release cards in responsive grid
+  - Implement release card click navigation to individual release pages
   - Add page metadata and SEO optimization
   - _Requirements: 1.1, 1.4, 2.2_
 
-- [x] 6. Implement dynamic album pages
+- [x] 6. Implement dynamic release pages
 
-  - Create dynamic route structure for individual album pages
-  - Build album page layout with cover art and metadata display
-  - Implement different layouts for singles vs EPs based on album type
+  - Create dynamic route structure for individual release pages
+  - Build release page layout with cover art and metadata display
+  - Implement different layouts for singles vs EPs based on release type
   - Add navigation back to discography
   - _Requirements: 2.3, 2.5, 7.1, 7.4_
 
@@ -68,9 +68,9 @@
   - Enable collapse functionality for expanded sections
   - _Requirements: 4.1, 4.2, 4.3, 4.5_
 
-- [x] 10. Implement single album page layout
+- [x] 10. Implement single release page layout
 
-  - Create simplified layout for single-track albums
+  - Create simplified layout for single-track releases
   - Provide direct access to lyrics and audio for single tracks
   - Maintain consistent navigation and branding elements
   - Differentiate single pages from EP pages through layout structure
@@ -94,10 +94,10 @@
 
 - [x] 13. Add streaming platform links and icons
 
-  - Update Album interface in types to include bandcamp, spotify, and appleMusic URL properties
-  - Modify data/albums.ts to include dummy URLs for all streaming platforms
+  - Update release interface in types to include bandcamp, spotify, and appleMusic URL properties
+  - Modify data/releases.ts to include dummy URLs for all streaming platforms
   - Create streaming platform icons component with standard service icons
-  - Implement streaming links section on album and single pages
+  - Implement streaming links section on release and single pages
   - Style icons with organic design principles and hover effects
   - _Requirements: 2.4, 6.5_
 
@@ -113,12 +113,12 @@
   - Add graceful error handling for audio playback failures
   - Implement loading states for audio and image assets
   - Create user-friendly error messages and retry mechanisms
-  - Add 404 handling for invalid album routes
+  - Add 404 handling for invalid release routes
   - _Requirements: 5.1, 5.2_
 
 - [ ]\* 16. Write component unit tests
-  - Create unit tests for AlbumCard component click handling and rendering
+  - Create unit tests for ReleaseCard component click handling and rendering
   - Test AudioPlayer component with mocked Tone.js functionality
   - Write tests for SongList expand/collapse behavior
-  - Test album data configuration and type safety
+  - Test release data configuration and type safety
   - _Requirements: 1.5, 3.2, 5.3_

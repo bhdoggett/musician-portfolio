@@ -1,4 +1,4 @@
-.albumPage {
+.releasePage {
   padding: var(--spacing-xl) 0;
   min-height: 100vh;
 }
@@ -28,8 +28,8 @@
   box-shadow: var(--shadow-md);
 }
 
-/* Album Header */
-.albumHeader {
+/* release Header */
+.releaseHeader {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--spacing-xl);
@@ -38,7 +38,7 @@
 }
 
 @media (min-width: 768px) {
-  .albumHeader {
+  .releaseHeader {
     grid-template-columns: auto 1fr;
     gap: var(--spacing-2xl);
   }
@@ -70,12 +70,12 @@
   transform: scale(1.02);
 }
 
-.albumInfo {
+.releaseInfo {
   text-align: center;
 }
 
 @media (min-width: 768px) {
-  .albumInfo {
+  .releaseInfo {
     text-align: left;
     padding-top: var(--spacing-lg);
   }
@@ -95,7 +95,7 @@
   }
 }
 
-.albumTitle {
+.releaseTitle {
   font-size: var(--font-size-4xl);
   font-weight: 700;
   color: var(--text-primary);
@@ -104,12 +104,12 @@
 }
 
 @media (min-width: 768px) {
-  .albumTitle {
+  .releaseTitle {
     font-size: calc(var(--font-size-4xl) * 1.2);
   }
 }
 
-.albumType {
+.releaseType {
   font-size: var(--font-size-lg);
   color: var(--text-secondary);
   font-weight: 500;
@@ -118,7 +118,7 @@
   margin-bottom: var(--spacing-md);
 }
 
-.albumDescription {
+.releaseDescription {
   font-size: var(--font-size-lg);
   color: var(--text-primary);
   line-height: 1.6;
@@ -126,7 +126,7 @@
   font-style: italic;
 }
 
-.albumMeta {
+.releaseMeta {
   display: flex;
   gap: var(--spacing-lg);
   justify-content: center;
@@ -134,7 +134,7 @@
 }
 
 @media (min-width: 768px) {
-  .albumMeta {
+  .releaseMeta {
     justify-content: flex-start;
   }
 }
@@ -148,8 +148,8 @@
   font-size: var(--font-size-sm);
 }
 
-/* Album Content */
-.albumContent {
+/* release Content */
+.releaseContent {
   background-color: var(--surface);
   border-radius: var(--radius-2xl);
   padding: var(--spacing-2xl);
@@ -158,20 +158,20 @@
 
 /* Responsive adjustments */
 @media (max-width: 640px) {
-  .albumPage {
+  .releasePage {
     padding: var(--spacing-lg) 0;
   }
 
-  .albumContent {
+  .releaseContent {
     padding: var(--spacing-lg);
     border-radius: var(--radius-xl);
   }
 
-  .albumTitle {
+  .releaseTitle {
     font-size: var(--font-size-3xl);
   }
 
-  .albumHeader {
+  .releaseHeader {
     gap: var(--spacing-lg);
     margin-bottom: var(--spacing-2xl);
   }

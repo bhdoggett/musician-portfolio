@@ -181,17 +181,6 @@ export const AudioPlayer: React.FC<AudioPlayerProps> = ({
     }
   }, [stopProgressTracking]);
 
-  // Handle stop
-  const handleStop = useCallback(() => {
-    if (audioRef.current) {
-      audioRef.current.pause();
-      audioRef.current.currentTime = 0;
-    }
-    setState((prev) => ({ ...prev, isPlaying: false, currentTime: 0 }));
-    stopProgressTracking();
-    onPlayStateChange?.(false);
-  }, [stopProgressTracking, onPlayStateChange]);
-
   // Handle seek
   const handleSeek = useCallback((seekTime: number) => {
     if (audioRef.current) {

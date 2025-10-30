@@ -1,22 +1,22 @@
 "use client";
 
 import React from "react";
-import { Album } from "@/types";
+import { Release } from "@/types";
 import { PlayButton } from "@/components/PlayButton";
-import styles from "./AlbumLayouts.module.css";
+import styles from "./ReleaseLayouts.module.css";
 
 interface SingleLayoutProps {
-  album: Album;
+  release: Release;
 }
 
-export const SingleLayout: React.FC<SingleLayoutProps> = ({ album }) => {
-  const song = album.songs[0]; // Singles have only one song
+export const SingleLayout: React.FC<SingleLayoutProps> = ({ release }) => {
+  const song = release.songs[0]; // Singles have only one song
 
   return (
     <div className={styles.singleLayout}>
       <div className={styles.singleTrack}>
         <div className={styles.singleTrackHeader}>
-          <PlayButton song={song} album={album} size="large" />
+          <PlayButton song={song} release={release} size="large" />
           <h2 className={styles.singleTrackTitle}>{song.title}</h2>
         </div>
 

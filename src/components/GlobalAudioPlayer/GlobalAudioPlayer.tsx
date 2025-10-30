@@ -38,18 +38,18 @@ export const GlobalAudioPlayer: React.FC = () => {
   return (
     <div className={styles.globalPlayer}>
       <div className={styles.trackInfo}>
-        <div className={styles.albumCover}>
+        <div className={styles.releaseCover}>
           <img
-            src={state.currentTrack.album.coverArt}
-            alt={state.currentTrack.album.title}
+            src={state.currentTrack.release.coverArt}
+            alt={state.currentTrack.release.title}
           />
         </div>
         <div className={styles.trackDetails}>
           <div className={styles.songTitle}>
             {state.currentTrack.song.title}
           </div>
-          <div className={styles.albumTitle}>
-            {state.currentTrack.album.title}
+          <div className={styles.releaseTitle}>
+            {state.currentTrack.release.title}
           </div>
         </div>
       </div>
@@ -61,7 +61,10 @@ export const GlobalAudioPlayer: React.FC = () => {
             state.isPlaying
               ? pauseTrack
               : () =>
-                  playTrack(state.currentTrack!.song, state.currentTrack!.album)
+                  playTrack(
+                    state.currentTrack!.song,
+                    state.currentTrack!.release
+                  )
           }
           disabled={state.isLoading || !!state.error}
           aria-label={state.isPlaying ? "Pause" : "Play"}

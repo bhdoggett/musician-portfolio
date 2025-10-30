@@ -8,13 +8,13 @@ import React, {
   useRef,
   useEffect,
 } from "react";
-import { Song, Album } from "@/types";
+import { Song, release } from "@/types";
 
 // Global audio state interface
 export interface GlobalAudioState {
   currentTrack: {
     song: Song;
-    album: Album;
+    release: release;
   } | null;
   isPlaying: boolean;
   isLoading: boolean;
@@ -25,7 +25,7 @@ export interface GlobalAudioState {
 
 // Audio actions
 type AudioAction =
-  | { type: "SET_TRACK"; payload: { song: Song; album: Album } }
+  | { type: "SET_TRACK"; payload: { song: Song; release: release } }
   | { type: "PLAY" }
   | { type: "PAUSE" }
   | { type: "STOP" }
@@ -37,7 +37,7 @@ type AudioAction =
 // Audio context interface
 interface AudioContextType {
   state: GlobalAudioState;
-  playTrack: (song: Song, album: Album) => void;
+  playTrack: (song: Song, release: release) => void;
   pauseTrack: () => void;
   stopTrack: () => void;
   seekTo: (time: number) => void;
@@ -231,10 +231,10 @@ export const AudioProvider: React.FC<{ children: React.ReactNode }> = ({
 
   // Public methods
   const playTrack = useCallback(
-    async (song: Song, album: Album) => {
+    async (song: Song, release: release) => {
       // If it's a different track, set it up
       if (!state.currentTrack || state.currentTrack.song.id !== song.id) {
-        dispatch({ type: "SET_TRACK", payload: { song, album } });
+        dispatch({ type: "SET_TRACK", payload: { song, release } });
         initializeAudio(song.audioUrl);
         return;
       }

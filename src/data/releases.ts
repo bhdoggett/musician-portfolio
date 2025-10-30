@@ -1,7 +1,7 @@
-import { Album } from "@/types";
+import { Release } from "@/types";
 
-// Centralized album data configuration mapping to existing assets
-export const albums: Album[] = [
+// Centralized release data configuration mapping to existing assets
+export const releases: Release[] = [
   // Glad EP
   {
     id: "glad",
@@ -10,9 +10,9 @@ export const albums: Album[] = [
     coverArt: "/assets/images/glad.jpeg",
     description: "Songs that mark a season of fighting for joy",
     streamingLinks: {
-      bandcamp: "https://bendoggett.bandcamp.com/album/glad",
-      spotify: "https://open.spotify.com/album/glad-ep",
-      appleMusic: "https://music.apple.com/album/glad-ep",
+      // bandcamp: "https://bendoggett.bandcamp.com/release/glad",
+      // spotify: "https://open.spotify.com/release/glad-ep",
+      // appleMusic: "https://music.apple.com/release/glad-ep",
     },
     songs: [
       {
@@ -107,9 +107,10 @@ export const albums: Album[] = [
     coverArt: "/assets/images/deep_to_deep.jpg",
     description: "An EP exploring the depths of faith and worship",
     streamingLinks: {
-      bandcamp: "https://bendoggett.bandcamp.com/album/deep-to-deep",
-      spotify: "https://open.spotify.com/album/deep-to-deep-ep",
-      appleMusic: "https://music.apple.com/album/deep-to-deep-ep",
+      bandcamp: "https://bendoggett.bandcamp.com/release/deep-to-deep",
+      spotify: "https://open.spotify.com/release/5X8Ch1ppAUAh78pX4y3b0a",
+      appleMusic:
+        "https://music.apple.com/us/release/deep-to-deep-ep/681212945",
     },
     songs: [
       {
@@ -184,6 +185,29 @@ export const albums: Album[] = [
   },
 
   {
+    id: "one-thing-psalm-27",
+    title: "One Thing (Psalm 27)",
+    type: "single",
+    coverArt: "/assets/images/psalm_27.jpg",
+    description: "One thing I ask from the Lord, this only do I seek",
+    streamingLinks: {
+      bandcamp: "https://bendoggett.bandcamp.com/track/psalm-27-one-thing",
+      spotify: "https://open.spotify.com/track/psalm-27-one-thing",
+      appleMusic: "https://music.apple.com/song/psalm-27-one-thing",
+    },
+    songs: [
+      {
+        id: "psalm-27-one-thing",
+        title: "Psalm 27 (One Thing)",
+        audioUrl: "/assets/music/psalm_27_one_thing.m4a",
+        lyrics:
+          'The LORD is my light and my salvation\nThe LORD is the strength of my life\nWhen evil men assail me, they will stumble and fall\nThough the host of hell surround me, I will not fear\n\nOne thing have I asked of the Lord\nAnd this I seek, to see the beauty of my King\nOne thing does my heart long to know\nThat you will hide me in the shelter of your wings\n\nHear me, O LORD, when I cry out\nShow your great grace and answer me\nHide not your love and mercy, turn me not away\nAnd when the host of hell surround me, my heart will say\n\nOne thing have I asked of the Lord\nAnd this I seek, to see the beauty of my King\nOne thing does my heart long to know\nThat you will hide me in the shelter of your wings\n\nMy heart says of you, "Seek his face"\nLORD, your face I seek\nMy heart says of you, "Seek his face"\nLORD, your face I seek\nMy heart says of you, "Seek his face"\nLORD, your face I seek\nMy heart says of you, "Seek his face"\n\nOne thing have I asked of the Lord\nAnd this I seek, to see the beauty of my King\nOne thing does my heart long to know\nThat you will hide me in the shelter of your wings',
+        copyright:
+          "Words & Music by Ben Doggett © 2017 Ben Doggett. All rights reserved.",
+      },
+    ],
+  },
+  {
     id: "psalm-23-shepherd-me",
     title: "Psalm 23 (Shepherd Me)",
     type: "single",
@@ -203,30 +227,6 @@ export const albums: Album[] = [
           "The LORD is My Shepherd, I shall not want\nIn pastures of green I will rest\nBeside quiet waters my soul is restored\nI drink and my heart is content\nHe leads me in righteousness\n\nYea, though I walk through the dark of death\nEvil I will not fear\nYour rod and your staff are my confidence\nMy God, you are always near\n\nA table you set in the midst of my foes\nA banquet prepared just for me\nMy head drips with oil and my cup overflows\nI sit at your table and feast\nMy shepherd supplies all I need\n\nSurely goodness and mercy will follow me\nAnd I will dwell in the house of God\nThrough the gates of eternity shepherd me\nAnd I will dwell in your house, O God",
         copyright:
           "Words & Music by Ben Doggett © 2015 Ben Doggett. All rights reserved.",
-      },
-    ],
-  },
-
-  {
-    id: "psalm-27-one-thing",
-    title: "Psalm 27 (One Thing)",
-    type: "single",
-    coverArt: "/assets/images/psalm_27.jpg",
-    description: "One thing I ask from the Lord, this only do I seek",
-    streamingLinks: {
-      bandcamp: "https://bendoggett.bandcamp.com/track/psalm-27-one-thing",
-      spotify: "https://open.spotify.com/track/psalm-27-one-thing",
-      appleMusic: "https://music.apple.com/song/psalm-27-one-thing",
-    },
-    songs: [
-      {
-        id: "psalm-27-one-thing",
-        title: "Psalm 27 (One Thing)",
-        audioUrl: "/assets/music/psalm_27_one_thing.m4a",
-        lyrics:
-          'The LORD is my light and my salvation\nThe LORD is the strength of my life\nWhen evil men assail me, they will stumble and fall\nThough the host of hell surround me, I will not fear\n\nOne thing have I asked of the Lord\nAnd this I seek, to see the beauty of my King\nOne thing does my heart long to know\nThat you will hide me in the shelter of your wings\n\nHear me, O LORD, when I cry out\nShow your great grace and answer me\nHide not your love and mercy, turn me not away\nAnd when the host of hell surround me, my heart will say\n\nOne thing have I asked of the Lord\nAnd this I seek, to see the beauty of my King\nOne thing does my heart long to know\nThat you will hide me in the shelter of your wings\n\nMy heart says of you, "Seek his face"\nLORD, your face I seek\nMy heart says of you, "Seek his face"\nLORD, your face I seek\nMy heart says of you, "Seek his face"\nLORD, your face I seek\nMy heart says of you, "Seek his face"\n\nOne thing have I asked of the Lord\nAnd this I seek, to see the beauty of my King\nOne thing does my heart long to know\nThat you will hide me in the shelter of your wings',
-        copyright:
-          "Words & Music by Ben Doggett © 2017 Ben Doggett. All rights reserved.",
       },
     ],
   },
@@ -279,15 +279,15 @@ export const albums: Album[] = [
   },
 ];
 
-// Helper functions for working with album data
-export const getAlbumById = (id: string): Album | undefined => {
-  return albums.find((album) => album.id === id);
+// Helper functions for working with release data
+export const getReleaseById = (id: string): Release | undefined => {
+  return releases.find((release) => release.id === id);
 };
 
-export const getAlbumsByType = (type: "single" | "ep"): Album[] => {
-  return albums.filter((album) => album.type === type);
+export const getReleasesByType = (type: "single" | "ep"): Release[] => {
+  return releases.filter((release) => release.type === type);
 };
 
-export const getAllAlbums = (): Album[] => {
-  return albums;
+export const getAllReleases = (): Release[] => {
+  return releases;
 };
